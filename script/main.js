@@ -16,3 +16,18 @@ hamburger.addEventListener("click", () => {
 shoppingCartIcon.addEventListener("click", () => {
     shoppingCart.classList.toggle("hide")
 })
+
+// get products from JSON
+
+async function getProducts(){
+    const response = await fetch("./products.json")
+    const data = await response.json()
+    return data;
+}
+
+// test json fetch
+
+getProducts().then(data => {
+    let products = data.products
+    console.log(products);
+})
