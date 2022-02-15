@@ -1,4 +1,6 @@
 @import "_partials.scss";
+@import "layouts/_header.scss";
+@import "layouts/_footer.scss";
 
 * {
     margin: 0;
@@ -7,7 +9,6 @@
     color: $black;
     font-family: $content-font;
     outline: 1px solid red;
-         
 }
 
 .wrapper {
@@ -16,61 +17,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .header {
-        height: 80px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        box-shadow: 0 4px 10px 0 rgb(161, 161, 161);
-
-        > * {
-            flex-basis: 100%;
-        }
-
-        .logo {
-            height: 60px;
-            background-color: $pink;
-        }
-
-        .navbar {
-            text-align: left;
-            margin-left: 30px;
-            font-size: 24px;
-
-            .navlinks {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 80px;
-                font-size: 24px;
- 
-                a {
-                    text-decoration: none;
-                    margin-top: 20px;
-                }
-
-                .social-media-links {
-                    display: flex;
-
-                    i {
-                        margin-right: 10px;
-                    }
-                }
-            }
-        }
-
-        .header-icons {
-            text-align: right;
-            margin-right: 30px;
-            font-size: 24px;
-        }
-    }
-}
-
-.hide {
-    display: none !important;
 }
