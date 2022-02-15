@@ -1,18 +1,32 @@
 .footer {
-  position: fixed;
+  position: fixed;  /*ändra */
   padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 -4px 10px 0 rgb(161, 161, 161);
+ 
+  
 
    .social-media-links-2 {
      
-    
 
       i {
         margin: 10px;
       }
 }
+
+p.fake-links {
+  font-size: 14px;
+}
+p.copywrite {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+
  
 }

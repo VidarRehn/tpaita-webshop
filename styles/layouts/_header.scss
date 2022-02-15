@@ -33,9 +33,14 @@
           top: 80px;
           font-size: 24px;
 
-          a {
+          .links {
+            display: flex;
+            flex-direction: column;
+
+            a {
               text-decoration: none;
               margin-top: 20px;
+          }
           }
 
           .social-media-links {
