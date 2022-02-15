@@ -1,33 +1,49 @@
 .main-landing-page {
-    margin-top: 80px;
-    margin-bottom: 80px;
-    .product-category {
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      height: 70vh;
-      img {
-        max-height: 100%;
-        // overflow: HIDDEN;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  .product-category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    //height: 70vh;
+    overflow: hidden;
+    flex: 1;
+    img {
+      max-height: 100%;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .image-text {
+      //för 50% opacity vit bakgrund på text:
+      // background: #ffffff80;
+      // padding:20px;
+      // border-radius: 10px;
+      position: absolute;
+      top: 45%;
+      left: 10%;
+      width: 70%;
+      p {
+        font-size: 3vh;
+        padding: 20px 0;
       }
-      .image-text {
-        position: absolute;
-        top: 40%;
-        left: 30%;
-        width: 40%;
-        p {
-          font-size: 1.5rem;
-        }
-        h2 {
-          font-family: $header-font;
-          font-size: 3rem;
-          font-weight: 500;
-        }
+      h2 {
+        font-family: $header-font;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      button {
+        height: 50px;
+        background-color: $pink;
+        color: $white;
+        border: none;
+        font-size: 20px;
+        padding: 0 30px;
+        border-radius: 5px;
+        font-weight: 500;
       }
     }
   }
-  
+}
