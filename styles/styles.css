@@ -168,6 +168,48 @@ main .breadcrumbs li a:hover {
   text-decoration: underline;
 }
 
+.main-landing-page {
+  margin-top: 80px;
+  margin-bottom: 52px;
+}
+
+.main-landing-page .product-category {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 70vh;
+}
+
+.main-landing-page .product-category img {
+  max-height: 100%;
+  overflow: HIDDEN;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-landing-page .product-category .image-text {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 30%;
+}
+
+.main-landing-page .product-category .image-text p {
+  font-size: 1.5rem;
+}
+
+.main-landing-page .product-category .image-text h2 {
+  font-family: "Karla", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0;
