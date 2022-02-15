@@ -1,0 +1,33 @@
+.main-landing-page {
+    margin-top: 80px;
+    margin-bottom: 52px;
+    .product-category {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 70vh;
+      img {
+        max-height: 100%;
+        overflow: HIDDEN;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .image-text {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        width: 30%;
+        p {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-family: $header-font;
+          font-size: 3rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
