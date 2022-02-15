@@ -1,6 +1,7 @@
 @import "_partials.scss";
 @import "layouts/_header.scss";
 @import "layouts/_footer.scss";
+@import "layouts/_breadcrumbs.scss";
 
 * {
     margin: 0;
@@ -157,3 +158,5 @@
         }
     }
 }
+
+

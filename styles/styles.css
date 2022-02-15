@@ -133,6 +133,35 @@
   font-size: 14px;
 }
 
+<<<<<<< HEAD
+.footer .social-media-links-2 i {
+  margin: 10px;
+}
+
+main {
+  width: 100%;
+  margin-top: 80px;
+}
+
+main .breadcrumbs {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 30px;
+}
+
+main .breadcrumbs li + li:before {
+  content: "/";
+}
+
+main .breadcrumbs li a {
+  text-decoration: none;
+}
+
+main .breadcrumbs li a:hover {
+  text-decoration: underline;
+=======
 .footer p.copywrite {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +170,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 10px;
+>>>>>>> main
 }
 
 * {
