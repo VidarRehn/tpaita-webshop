@@ -36,6 +36,8 @@
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  -webkit-box-shadow: 0 4px 10px 0 #a1a1a1;
+          box-shadow: 0 4px 10px 0 #a1a1a1;
 }
 
 .wrapper .header > * {
