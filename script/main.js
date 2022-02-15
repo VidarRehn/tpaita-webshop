@@ -55,3 +55,17 @@ getProducts().then(data => {
     let products = data.products
     console.log(products);
 })
+
+// querystrings
+
+const linksInNav = document.querySelector(".links")
+
+const stringifyCategories = (categories) => {
+    linksInNav.innerHTML = categories.map(category => {
+        return `<a href="index.html?category=${category.category}">${category.category}</a>`
+    }).join("")
+}
+
+getProducts().then(data => {
+    stringifyCategories(data.products)
+})
