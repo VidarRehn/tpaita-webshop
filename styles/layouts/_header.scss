@@ -6,6 +6,8 @@
   align-items: center;
   position: fixed;
   box-shadow: 0 4px 10px 0 rgb(161, 161, 161);
+  z-index: 2;
+  background: $white;
 
   > * {
       flex-basis: 100%;
