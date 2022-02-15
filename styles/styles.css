@@ -99,7 +99,6 @@
   padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
-  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,14 +107,33 @@
           justify-content: center;
 }
 
-.footer .social-media-links-2 {
+.footer .social-media-links-2 i {
+  margin: 10px;
+}
+
+main {
+  width: 100%;
+  margin-top: 80px;
+}
+
+main .breadcrumbs {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px 30px;
 }
 
-.footer .social-media-links-2 i {
-  margin: 10px;
+main .breadcrumbs li + li:before {
+  content: "/";
+}
+
+main .breadcrumbs li a {
+  text-decoration: none;
+}
+
+main .breadcrumbs li a:hover {
+  text-decoration: underline;
 }
 
 * {
