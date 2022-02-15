@@ -1,0 +1,34 @@
+{
+    "products": [{
+        "category": "men",
+        "items": [{
+            "id": 1,
+            "name": "white tee",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "color": "white",
+            "price": 1000,
+            "image": "images/image.jpg"
+        },{
+            "id": 2,
+            "name": "whiter tee",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "color": "egg-shell",
+            "price": 1800,
+            "image": "images/image.jpg"
+        },{
+            "id": 3,
+            "name": "whitest tee",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "color": "dirty white",
+            "price": 1100,
+            "image": "images/image.jpg"
+        },{
+            "id": 4,
+            "name": "even whiter tee",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "color": "white",
+            "price": 1200,
+            "image": "images/image.jpg"
+        },]
+    }]
+}
