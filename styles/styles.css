@@ -157,4 +157,98 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.wrapper .login-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  z-index: 100;
+}
+
+.wrapper .login-page .exit-box {
+  position: relative;
+  top: -50px;
+  right: -150px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #989898;
+  cursor: pointer;
+}
+
+.wrapper .login-page .logo {
+  height: 60px;
+  width: 100px;
+  background-color: #F700FC;
+}
+
+.wrapper .login-page .my-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 207px;
+  height: 400px;
+}
+
+.wrapper .login-page .my-form > * {
+  margin: 7px;
+}
+
+.wrapper .login-page .my-form .login-btn {
+  background-color: #F700FC;
+  color: #FFF;
+}
+
+.wrapper .login-page .my-form .create-account-btn {
+  background-color: #49C000;
+  color: #FFF;
+}
+
+.wrapper .login-page .my-form input[type=text] {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  color: #EEEEEE;
+  border: #A1A1A1;
+}
+
+.wrapper .login-page .my-form p {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.wrapper .login-page .my-form button {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
 /*# sourceMappingURL=styles.css.map */
