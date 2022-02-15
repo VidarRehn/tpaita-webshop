@@ -41,14 +41,6 @@ exitBox.addEventListener("click", () =>{
 })
 
 
-// get products from JSON
-
-async function getProducts(){
-    const response = await fetch("./products.json")
-    const data = await response.json()
-    return data;
-}
-
 // test json fetch
 
 getProducts().then(data => {
@@ -58,14 +50,40 @@ getProducts().then(data => {
 
 // querystrings
 
-const linksInNav = document.querySelector(".links")
+let linksInNav = document.querySelector(".links")
 
-const stringifyCategories = (categories) => {
+let stringifyCategories = (categories) => {
     linksInNav.innerHTML = categories.map(category => {
-        return `<a href="index.html?category=${category.category}">${category.category}</a>`
+        return `<a href="product-list.html?category=${category.category}">${category.category}</a>`
     }).join("")
 }
 
 getProducts().then(data => {
     stringifyCategories(data.products)
 })
+
+
+// fixing breadcrumbs
+
+const breadcrumbCategory = document.querySelector("#breadcrumb-category")
+
+const fillingBreadcrumbs = (jsondata) => {
+    const params = new URLSearchParams(location.search)
+    const category = params.get("category")
+
+    if (category) {
+        console.log(category);
+        const currentCategory = jsondata.find(cat => {
+            console.log(cat)
+            return cat.category == category;
+        })
+        
+        breadcrumbCategory.innerText = currentCategory.category
+    }
+}
+
+getProducts().then(data => {
+    fillingBreadcrumbs(data.products)
+})
+
+
