@@ -27,6 +27,20 @@ shoppingCartIcon.addEventListener("click", () => {
     }
 })
 
+// toggle login page
+const loginPage = document.querySelector(".login-page");
+const loginUser = document.querySelector(".fa-user");
+const exitBox = document.querySelector(".exit-box");
+
+
+loginUser.addEventListener("click", () =>{
+    loginPage.classList.toggle("hide")
+})
+exitBox.addEventListener("click", () =>{
+    loginPage.classList.toggle("hide")
+})
+
+
 // get products from JSON
 
 async function getProducts(){
