@@ -27,6 +27,20 @@ shoppingCartIcon.addEventListener("click", () => {
     }
 })
 
+// toggle login page
+const loginPage = document.querySelector(".login-page");
+const loginUser = document.querySelector(".fa-user");
+const exitBox = document.querySelector(".exit-box-login");
+
+
+loginUser.addEventListener("click", () =>{
+    loginPage.classList.toggle("hide")
+})
+exitBox.addEventListener("click", () =>{
+    loginPage.classList.toggle("hide")
+})
+
+
 // get products from JSON
 
 async function getProducts(){
@@ -40,4 +54,18 @@ async function getProducts(){
 getProducts().then(data => {
     let products = data.products
     console.log(products);
+})
+
+// querystrings
+
+const linksInNav = document.querySelector(".links")
+
+const stringifyCategories = (categories) => {
+    linksInNav.innerHTML = categories.map(category => {
+        return `<a href="index.html?category=${category.category}">${category.category}</a>`
+    }).join("")
+}
+
+getProducts().then(data => {
+    stringifyCategories(data.products)
 })
