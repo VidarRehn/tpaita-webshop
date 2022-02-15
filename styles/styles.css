@@ -191,7 +191,7 @@
   z-index: 100;
 }
 
-.wrapper .login-page .exit-box {
+.wrapper .login-page .exit-box-login {
   position: relative;
   top: -50px;
   right: -150px;
@@ -208,7 +208,7 @@
   background-color: #F700FC;
 }
 
-.wrapper .login-page .my-form {
+.wrapper .login-page .my-form-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,21 +226,123 @@
   height: 400px;
 }
 
-.wrapper .login-page .my-form > * {
+.wrapper .login-page .my-form-login > * {
   margin: 7px;
 }
 
-.wrapper .login-page .my-form .login-btn {
+.wrapper .login-page .my-form-login .login-btn {
   background-color: #F700FC;
   color: #FFF;
 }
 
-.wrapper .login-page .my-form .create-account-btn {
+.wrapper .login-page .my-form-login .create-account-btn {
   background-color: #49C000;
   color: #FFF;
 }
 
-.wrapper .login-page .my-form input[type=text] {
+.wrapper .login-page .my-form-login input[type=text] {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  color: #A1A1A1;
+  border: none;
+}
+
+.wrapper .login-page .my-form-login p {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.wrapper .login-page .my-form-login button {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.wrapper .create-account-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  z-index: 100;
+}
+
+.wrapper .create-account-page .exit-box-account {
+  position: relative;
+  top: -50px;
+  right: -150px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #989898;
+  cursor: pointer;
+}
+
+.wrapper .create-account-page .logo {
+  height: 60px;
+  width: 100px;
+  background-color: #F700FC;
+}
+
+.wrapper .create-account-page .my-form-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 243px;
+  height: 400px;
+}
+
+.wrapper .create-account-page .my-form-account > * {
+  margin: 7px;
+}
+
+.wrapper .create-account-page .my-form-account .first-last-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.wrapper .create-account-page .my-form-account .first-last-name input[type=text] {
+  width: 117px;
+}
+
+.wrapper .create-account-page .my-form-account input[type=text] {
   width: 100%;
   height: 44px;
   padding: 10px;
@@ -249,16 +351,22 @@
   border: #A1A1A1;
 }
 
-.wrapper .login-page .my-form p {
+.wrapper .create-account-page .my-form-account p {
   font-size: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
-.wrapper .login-page .my-form button {
+.wrapper .create-account-page .my-form-account button {
   width: 100%;
   height: 44px;
   padding: 10px;
   cursor: pointer;
   border: none;
+}
+
+.wrapper .create-account-page .my-form-account .create-account-btn {
+  background-color: #F700FC;
+  color: #FFF;
 }
 /*# sourceMappingURL=styles.css.map */

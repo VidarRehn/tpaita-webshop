@@ -30,7 +30,7 @@ shoppingCartIcon.addEventListener("click", () => {
 // toggle login page
 const loginPage = document.querySelector(".login-page");
 const loginUser = document.querySelector(".fa-user");
-const exitBox = document.querySelector(".exit-box");
+const exitBox = document.querySelector(".exit-box-login");
 
 
 loginUser.addEventListener("click", () =>{
