@@ -133,6 +133,7 @@
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .footer p.copywrite {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +142,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 10px;
+=======
+.footer .social-media-links-2 i {
+  margin: 10px;
+>>>>>>> main
 }
 
 main {
