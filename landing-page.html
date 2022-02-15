@@ -21,37 +21,72 @@
     />
   </head>
   <body>
+    
     <div class="wrapper">
-      <header class="header">
-        <nav class="navbar">
-          <i class="fa fa-bars"></i>
-          <div class="navlinks hide">
-            <a href="#">men</a>
-            <a href="#">women</a>
-            <a href="#">kids</a>
-            <div class="social-media-links">
-              <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-facebook-square"></i></a>
-              <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
-              <a href="#"><i class="fa fa-envelope"></i></a>
+        <header class="header">
+            <nav class="navbar">
+                <i class="fa fa-bars"></i>
+                <div class="navlinks hide">
+                    <div class="links">
+                    <!-- querystrings -->
+                    </div>  
+                    <div class="social-media-links">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="logo"></div>
+            <div class="header-icons">
+                <i class="fa fa-user"></i>
+                <i class="fa fa-shopping-cart"></i>
+                <div class="shopping-cart-popup hide"></div>
             </div>
-          </div>
-        </nav>
-        <div class="logo"></div>
-        <div class="header-icons">
-          <i class="fa fa-user"></i>
-          <i class="fa fa-shopping-cart"></i>
-          <div class="shopping-cart-popup hide"></div>
+        </header>
+        <div class="login-page hide">
+            <div class="exit-box-login">
+                    X
+            </div>
+            <div class="logo"></div>
+            <form class="my-form-login" action="">
+                <input type="text" name="email" id="login-email" placeholder="email-address">
+                <input type="text" name="password" id="login-password" placeholder="password">
+                <button class="login-btn">log in</button>
+                <p class="login-paragraph">forgot password</p>
+                <button class="create-account-btn">create an account</button>
+            </form>
         </div>
-      </header>
-
+        <div class="create-account-page hide">
+            <div class="exit-box-account">
+                X
+            </div>
+            <div class="logo"></div>
+            <form class="my-form-account" action="">
+                <div class="first-last-name">
+                    <input type="text" name="first-name" id="first-name-account" placeholder="First Name">
+                    <input type="text" name="last-name" id="last-name-account" placeholder="Last Name">
+                </div>
+                <input type="text" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres">
+                <input type="text" name="phone-number" id="phone-number" placeholder="phone number">
+                <input type="text" name="password-account" id="password-account" placeholder="password">
+                <input type="text" name="confirm-password" id="confirm-password" placeholder="confirm password">
+                <p>by clicking sign up you agree to our terms and conditions</p>
+                <button class="create-account-btn">sign up</button>
+            </form>
+        </div>
+    
       <main class="main-landing-page">
         <section class="product-category">
           <img src="./images/Tissha.jpg" alt="man with cool white t-shirt" />
           <div class="image-text">
-              <h2>men</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quae itaque! </p>
-              <button>KLIKK</button>
+            <h2>men</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
+            <button>KLIKK</button>
           </div>
         </section>
         <section class="product-category">
@@ -61,9 +96,12 @@
           />
           <div class="image-text">
             <h2>women</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quae itaque! </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
             <button>KLIKK</button>
-        </div>
+          </div>
         </section>
         <section class="product-category">
           <img
@@ -72,9 +110,12 @@
           />
           <div class="image-text">
             <h2>kids</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quae itaque! </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
             <button>KLIKK</button>
-        </div>
+          </div>
         </section>
       </main>
     </div>
