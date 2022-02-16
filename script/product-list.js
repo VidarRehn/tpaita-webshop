@@ -77,7 +77,6 @@ function addListenerToButtons(){
 
             localStorage.setItem("users", JSON.stringify(userArray))
 
-            // find which user is logged in!
         })
     })
 }
