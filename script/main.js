@@ -39,12 +39,6 @@ loginUser.addEventListener("click", () =>{
 exitBoxLogin.addEventListener("click", () =>{
     loginPage.classList.toggle("hide")
 })
-const myFormLogin = document.querySelector(".my-form-login");
-
-myFormLogin.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    
-})
 
 //toggle create account page
 
@@ -60,6 +54,21 @@ createAccountBtn.addEventListener("click", () =>{
 exitBoxAccount.addEventListener("click", () =>{
     createAccountPage.classList.toggle("hide")
 })
+// submit form events
+
+const myFormLogin = document.querySelector(".my-form-login");
+const myFormAccout = document.querySelector(".my-form-account")
+
+myFormLogin.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    
+})
+
+myFormAccout.addEventListener("submit", (e) =>{
+    e.preventDefault();
+})
+
+
 
 // test json fetch
 
