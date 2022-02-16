@@ -30,16 +30,36 @@ shoppingCartIcon.addEventListener("click", () => {
 // toggle login page
 const loginPage = document.querySelector(".login-page");
 const loginUser = document.querySelector(".fa-user");
-const exitBox = document.querySelector(".exit-box-login");
+const exitBoxLogin = document.querySelector(".exit-box-login");
 
 
 loginUser.addEventListener("click", () =>{
     loginPage.classList.toggle("hide")
 })
-exitBox.addEventListener("click", () =>{
+exitBoxLogin.addEventListener("click", () =>{
     loginPage.classList.toggle("hide")
 })
+const myFormLogin = document.querySelector(".my-form-login");
 
+myFormLogin.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    
+})
+
+//toggle create account page
+
+const createAccountBtn = document.querySelector(".create-account-btn");
+const createAccountPage = document.querySelector(".create-account-page");
+const exitBoxAccount = document.querySelector(".exit-box-account")
+
+createAccountBtn.addEventListener("click", () =>{
+   loginPage.classList.toggle("hide");
+   createAccountPage.classList.toggle("hide")
+})
+
+exitBoxAccount.addEventListener("click", () =>{
+    createAccountPage.classList.toggle("hide")
+})
 
 // test json fetch
 

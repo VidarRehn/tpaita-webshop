@@ -56,6 +56,7 @@
           align-items: center;
           width: 207px;
           height: 400px;
+          padding: 0px;
           > *{
             margin: 7px
           }
@@ -67,7 +68,7 @@
               background-color: $green;
               color:$white;
           }
-          input[type=text]{
+          input{
               width: 100%;
               height: 44px;
               padding: 10px;
@@ -122,6 +123,7 @@
             align-items: center;
             width: 243px;
             height: 400px;
+            padding: 0;
             > *{
               margin: 7px
             }
@@ -130,11 +132,11 @@
                 flex-direction: row;
                 justify-content: space-between;
                 width: 100%;
-                input[type=text]{
+                input{
                     width: 117px;
                 }
             }
-            input[type=text]{
+            input{
                 width: 100%;
                 height: 44px;
                 padding: 10px;
@@ -153,8 +155,6 @@
                 padding: 10px;
                 cursor: pointer;
                 border:none;
-            }
-            .create-account-btn{
                 background-color: $pink;
                 color: $white;
             }

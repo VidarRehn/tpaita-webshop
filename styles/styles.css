@@ -375,6 +375,7 @@ main .breadcrumbs li a:hover {
           align-items: center;
   width: 207px;
   height: 400px;
+  padding: 0px;
 }
 
 .wrapper .login-page .my-form-login > * {
@@ -391,7 +392,7 @@ main .breadcrumbs li a:hover {
   color: #FFF;
 }
 
-.wrapper .login-page .my-form-login input[type=text] {
+.wrapper .login-page .my-form-login input {
   width: 100%;
   height: 44px;
   padding: 10px;
@@ -469,6 +470,7 @@ main .breadcrumbs li a:hover {
           align-items: center;
   width: 243px;
   height: 400px;
+  padding: 0;
 }
 
 .wrapper .create-account-page .my-form-account > * {
@@ -489,11 +491,11 @@ main .breadcrumbs li a:hover {
   width: 100%;
 }
 
-.wrapper .create-account-page .my-form-account .first-last-name input[type=text] {
+.wrapper .create-account-page .my-form-account .first-last-name input {
   width: 117px;
 }
 
-.wrapper .create-account-page .my-form-account input[type=text] {
+.wrapper .create-account-page .my-form-account input {
   width: 100%;
   height: 44px;
   padding: 10px;
@@ -514,9 +516,6 @@ main .breadcrumbs li a:hover {
   padding: 10px;
   cursor: pointer;
   border: none;
-}
-
-.wrapper .create-account-page .my-form-account .create-account-btn {
   background-color: #F700FC;
   color: #FFF;
 }
