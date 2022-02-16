@@ -14,6 +14,8 @@
   position: fixed;
   -webkit-box-shadow: 0 4px 10px 0 #a1a1a1;
           box-shadow: 0 4px 10px 0 #a1a1a1;
+  z-index: 2;
+  background: #FFF;
 }
 
 .header > * {
@@ -219,7 +221,7 @@ main .breadcrumbs li a:hover {
 
 .main-landing-page {
   margin-top: 80px;
-  margin-bottom: 52px;
+  margin-bottom: 80px;
 }
 
 .main-landing-page .product-category {
@@ -231,12 +233,15 @@ main .breadcrumbs li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  height: 70vh;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main-landing-page .product-category img {
   max-height: 100%;
-  overflow: HIDDEN;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -244,19 +249,49 @@ main .breadcrumbs li a:hover {
 
 .main-landing-page .product-category .image-text {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  width: 30%;
+  top: 45%;
+  left: 10%;
+  width: 70%;
 }
 
 .main-landing-page .product-category .image-text p {
-  font-size: 1.5rem;
+  font-size: 3vh;
+  padding: 20px 0;
 }
 
 .main-landing-page .product-category .image-text h2 {
   font-family: "Karla", sans-serif;
   font-size: 3rem;
   font-weight: 500;
+}
+
+.main-landing-page .product-category .image-text button {
+  height: 50px;
+  background-color: #F700FC;
+  color: #FFF;
+  border: none;
+  font-size: 20px;
+  padding: 0 30px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-list article {
+  height: 230px;
+  width: 150px;
 }
 
 * {
