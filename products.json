@@ -45,35 +45,35 @@
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "white",
             "price": 1000,
-            "image": "images/image.jpg"
+            "image": "images/women1.jpg"
         },{
             "id": 7,
             "name": "whiter tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "egg-shell",
             "price": 1800,
-            "image": "images/image.jpg"
+            "image": "images/women2.jpg"
         },{
             "id": 8,
             "name": "whitest tee",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "dirty white",
             "price": 1100,
-            "image": "images/image.jpg"
+            "image": "images/women3.jpg"
         },{
             "id": 9,
             "name": "even whiter tee",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "crème",
             "price": 1200,
-            "image": "images/image.jpg"
+            "image": "images/women4.jpg"
         },{
             "id": 10,
             "name": "the most white tee",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "light beige",
             "price": 1600,
-            "image": "images/image.jpg"
+            "image": "images/women5.jpg"
         }]
     },{
         "category": "kids",
@@ -83,35 +83,35 @@
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "white",
             "price": 1000,
-            "image": "images/image.jpg"
+            "image": "images/kid1.jpg"
         },{
             "id": 12,
             "name": "whiter tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "egg-shell",
             "price": 1800,
-            "image": "images/image.jpg"
+            "image": "images/kid2.jpg"
         },{
             "id": 13,
             "name": "whitest tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "dirty white",
             "price": 1100,
-            "image": "images/image.jpg"
+            "image": "images/kid3.jpg"
         },{
             "id": 14,
             "name": "even whiter tee",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "crème",
             "price": 1200,
-            "image": "images/image.jpg"
+            "image": "images/kid4.jpg"
         },{
             "id": 15,
             "name": "the most white tee",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "light beige",
             "price": 1600,
-            "image": "images/image.jpg"
+            "image": "images/kid5.jpg"
         }]
     }]
 }
