@@ -1,4 +1,4 @@
-/*
+
 // fixing breadcrumbs
 
 const breadcrumbCategory = document.querySelector("#breadcrumb-category")
@@ -21,4 +21,3 @@ const fillingBreadcrumbs = (jsondata) => {
 getProducts().then(data => {
     fillingBreadcrumbs(data.products)
 })
-*/
