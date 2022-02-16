@@ -3,14 +3,14 @@
         "category": "men",
         "items": [{
             "id": 1,
-            "name": "white tee",
+            "name": "white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "white",
             "price": 1000,
             "image": "images/image.jpg"
         },{
             "id": 2,
-            "name": "whiter tee",
+            "name": "whiter tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "egg-shell",
             "price": 1800,
@@ -41,14 +41,14 @@
         "category": "women",
         "items": [{
             "id": 6,
-            "name": "white tee",
+            "name": "white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "white",
             "price": 1000,
             "image": "images/image.jpg"
         },{
             "id": 7,
-            "name": "whiter tee",
+            "name": "whiter tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "egg-shell",
             "price": 1800,
@@ -79,21 +79,21 @@
         "category": "kids",
         "items": [{
             "id": 11,
-            "name": "white tee",
+            "name": "white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "white",
             "price": 1000,
             "image": "images/image.jpg"
         },{
             "id": 12,
-            "name": "whiter tee",
+            "name": "whiter tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "egg-shell",
             "price": 1800,
             "image": "images/image.jpg"
         },{
             "id": 13,
-            "name": "whitest tee",
+            "name": "whitest tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "color": "dirty white",
             "price": 1100,
