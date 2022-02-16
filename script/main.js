@@ -1,4 +1,6 @@
 
+
+
 // toggle hamburger
 
 const navLinks = document.querySelector(".navlinks")
@@ -61,6 +63,31 @@ const myFormAccount = document.querySelector(".my-form-account")
 
 myFormLogin.addEventListener("submit", (e)=>{
     e.preventDefault();
+
+    let email = document.querySelector("#login-email")
+    let password = document.querySelector("#login-password")
+
+    userArray.forEach(userobj => {
+        if (userobj.email == email.value){
+            if (userobj.password == password.value){
+                console.log("hej")
+
+                let indexOfUserLoggedIn = userArray.findIndex(object => {
+                    return object.loggedin == true
+                })
+            
+                userArray[indexOfUserLoggedIn].loggedin = false
+                userobj.loggedin = true
+
+                localStorage.setItem("users", JSON.stringify(userArray))
+            }
+        }
+    })
+
+    email.value = ""
+    password.value = ""
+
+    loginPage.classList.toggle("hide")
     
 })
 
@@ -104,6 +131,16 @@ myFormAccount.addEventListener("submit", (e) =>{
 
     userNameshown.innerText = userObj.name
 
+    firstName.value = ""
+    lastName.value = ""
+    address.value = ""
+    zipCode.value = ""
+    email.value = ""
+    password.value = ""
+    confirmPassword.value = ""
+    phone.value = ""
+
+    createAccountPage.classList.toggle("hide")
 })
 
 // querystrings
@@ -146,5 +183,4 @@ if (storedUser){
     
     })
 }
-
 
