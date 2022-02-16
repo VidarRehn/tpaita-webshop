@@ -221,6 +221,19 @@ form {
           justify-content: center;
 }
 
+.order-form input:invalid {
+  border: 2px solid red;
+}
+
+.order-form input:valid {
+  border: 2px solid green;
+}
+
+.order-form input:focus {
+  border: 2px solid yellow;
+  outline: none;
+}
+
 main {
   width: 100%;
   margin-top: 80px;
@@ -387,7 +400,6 @@ main .breadcrumbs li a:hover {
           box-sizing: border-box;
   color: #000;
   font-family: "Red Hat Display", sans-serif;
-  outline: 1px solid red;
 }
 
 .wrapper {
