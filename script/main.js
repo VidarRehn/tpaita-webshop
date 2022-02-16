@@ -68,15 +68,6 @@ myFormAccout.addEventListener("submit", (e) =>{
     e.preventDefault();
 })
 
-
-
-// test json fetch
-
-getProducts().then(data => {
-    let products = data.products
-    console.log(products);
-})
-
 // querystrings
 
 let linksInNav = document.querySelector(".links")
@@ -90,4 +81,33 @@ let stringifyCategories = (categories) => {
 getProducts().then(data => {
     stringifyCategories(data.products)
 })
+
+// load guest (from json) in local storage
+
+const getGuest = async () => {
+    const response = await fetch("guest-user.json")
+    const data = await response.json()
+    return data
+}
+
+let userArray = []
+
+// check if guest exists in local storage
+
+let storedUser = JSON.parse(localStorage.getItem("users"))
+
+if (storedUser){
+    userArray = [...storedUser]
+
+} else { // load guest into json
+
+    getGuest().then(data => {
+        userArray.push(data.users[0])
+    
+        localStorage.setItem("users", JSON.stringify(userArray))
+    
+    })
+}
+
+console.log(userArray)
 
