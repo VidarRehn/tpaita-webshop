@@ -54,7 +54,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 207px;
+          width: 300px;
           height: 400px;
           padding: 0px;
           > *{
@@ -121,8 +121,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 243px;
-            height: 400px;
+            width: 300px;
+            height: min-content;
             padding: 0;
             > *{
               margin: 7px
@@ -133,7 +133,7 @@
                 justify-content: space-between;
                 width: 100%;
                 input{
-                    width: 117px;
+                    width: 48%;
                 }
             }
             input{
