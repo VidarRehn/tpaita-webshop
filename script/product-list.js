@@ -1,7 +1,6 @@
-
 // fixing breadcrumbs
 
-const breadcrumbCategory = document.querySelector("#breadcrumb-category")
+const breadcrumbCategory = document.querySelector("#breadcrumb-category");
 
 const fillingBreadcrumbs = (jsondata) => {
     const params = new URLSearchParams(location.search)
@@ -36,10 +35,10 @@ async function drawProducts(jsondata){
                 <p class="product-name">${prod.name}</p>
                 <p class="product-description">${prod.description}</p>
                 <button class="add-to-cart-btn">Add to cart</button>
-            </div>`
-            productListContainer.append(article)
-        });
-    }
+            </div>`;
+      productListContainer.append(article);
+    });
+  }
 }
 
 getProducts().then(data => {
@@ -80,4 +79,16 @@ function addListenerToButtons(){
             // find which user is logged in!
         })
     })
+}
+
+//TOGGLE PRODUCT DETAILS
+
+const productPopUp = document.querySelector("#product-pop-up");
+let productContainer = document.querySelector(".article-container");
+
+function showProduct(x) {
+  console.log(x.innerHTML);
+  productContainer.innerHTML="";
+productContainer.innerHTML=x.innerHTML
+  productPopUp.classList.toggle("hide");
 }
