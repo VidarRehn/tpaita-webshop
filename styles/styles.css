@@ -482,8 +482,8 @@ main .breadcrumbs li a:hover {
   height: 44px;
   padding: 10px;
   background-color: #EEEEEE;
-  color: #EEEEEE;
-  border: #A1A1A1;
+  color: #A1A1A1;
+  border: none;
 }
 
 .wrapper .create-account-page .my-form-account p {
