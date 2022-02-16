@@ -28,6 +28,7 @@ async function drawProducts(jsondata){
         let productArray = currentCategory.items
         productArray.forEach(prod => {
             let article = document.createElement("article")
+            article.setAttribute('onclick','showProduct(this)')
             article.innerHTML = `
             <img src="${prod.image}" alt=""/>
             <div class="price">${prod.price}</div>
