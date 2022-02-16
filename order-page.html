@@ -57,7 +57,7 @@
         </div>
         <div class="create-account-page hide">
             <div class="exit-box-account">
-                X
+                
             </div>
             <div class="logo"></div>
             <form class="my-form-account" action="">
@@ -87,19 +87,42 @@
 
           <h1>Order</h1>
 
-          <form>
-            <input type="text" placeholder="firstname" size="22" class="input1">
-            <input type="text" placeholder="lastname" size="22"  class="input1">
-            <input type="text" placeholder="e-mail adress"  size="50"  class="input2"> 
-            <input type="text" placeholder="telephone number"  size="50"  class="input2"> 
-            <input type="text" placeholder="password"  size="50"  class="input2"> 
-            <input type="text" placeholder="confirm password"  size="50"  class="input2"> 
+          <form class="order-form">
+
+            
+            
+            <input type="text"  placeholder="firstname" size="22" class="input1" id="firstname" required>
+            
+
+            
+            <input type="text"  placeholder="lastname" size="22"  class="input1" id="lastname" required>
+            
+
+            
+            <input type="email"  placeholder="e-mail adress"  size="50"  class="input2" id="email" required> 
+           
+
+           
+            <input type="text"  placeholder="telephone number"  size="50"  class="input2" id ="telephone" required> 
+            
+
+           
+            <input type="password"  placeholder="password"  size="50"  class="input2" id="password" required> 
+            
+
+            
+            <input type="text"  placeholder="confirm password"  size="50"  class="input2" required> 
+            
+
+            
+        
             <br>
+            <div class="button-container">
+            <button class="pay-button" >Pay</button>
+            <p id="demo"></p>
+            </div>
           </form>
 
-          <div class="button-container">
-          <button class="pay-button">Pay</button>
-          </div>
         </main>
 
 
@@ -124,4 +147,6 @@
 </body>
 <script src="./script/api.js"></script>
 <script src="./script/main.js"></script>
+<script src="./script/order-page.js"></script>
 </html>
+ 
