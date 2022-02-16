@@ -1,0 +1,42 @@
+{
+    "users": [{        
+        "name": "guest",
+        "loggedin": "true",
+        "cart": [{
+            "category": "men",
+            "name": "blabla"
+        },{
+            "category": "men",
+            "name": "blabla"
+        }]
+    },{
+        "name": "guest",
+        "logged-in": "false",
+        "address": "blabla",
+        "email": "blabla",
+        "phone":  "blabla",
+        "password": "blabla",
+        "cart": [{
+            "category": "men",
+            "name": "blabla"
+        },{
+            "category": "men",
+            "name": "blabla"
+        }]
+    },{
+        "name": "guest",
+        "logged-in": "false",
+        "address": "blabla",
+        "email": "blabla",
+        "phone":  "blabla",
+        "password": "blabla",
+        "cart": [{
+            "category": "men",
+            "name": "blabla"
+        },{
+            "category": "men",
+            "name": "blabla"
+        }]
+    }]
+}
+
