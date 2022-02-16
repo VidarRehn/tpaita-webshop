@@ -1,7 +1,7 @@
 {
     "users": [{        
         "name": "guest",
-        "loggedin": "true",
+        "loggedin": true,
         "address": null,
         "email": null,
         "phone":  null,

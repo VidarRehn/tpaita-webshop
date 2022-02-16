@@ -56,9 +56,24 @@
   }
 
   .header-icons {
+      display: flex;
       text-align: right;
       margin-right: 30px;
       font-size: 24px;
+
+      .user {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          position: absolute;
+          font-size: 10px;
+          top: 45px;
+          text-align: center;
+        }
+      }
 
       .fa {
         padding: 10px;

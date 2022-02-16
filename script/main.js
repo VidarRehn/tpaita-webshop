@@ -57,15 +57,53 @@ exitBoxAccount.addEventListener("click", () =>{
 // submit form events
 
 const myFormLogin = document.querySelector(".my-form-login");
-const myFormAccout = document.querySelector(".my-form-account")
+const myFormAccount = document.querySelector(".my-form-account")
 
 myFormLogin.addEventListener("submit", (e)=>{
     e.preventDefault();
     
 })
 
-myFormAccout.addEventListener("submit", (e) =>{
+let userNameshown = document.querySelector(".user-logged-in")
+
+myFormAccount.addEventListener("submit", (e) =>{
     e.preventDefault();
+
+    // spara ny användare i local storage
+
+    let firstName = document.querySelector("#first-name-account")
+    let lastName = document.querySelector("#last-name-account")
+    let address = document.querySelector("#address")
+    let zipCode = document.querySelector("#zip-code")
+    let email = document.querySelector("#e-mail-account")
+    let password = document.querySelector("#password-account")
+    let confirmPassword = document.querySelector("#confirm-password")
+    let phone = document.querySelector("#phone-number")
+
+    let userObj = {
+        name: `${firstName.value} ${lastName.value}`,
+        loggedin: true,
+        address: address.value,
+        zipCode: zipCode.value,
+        email: email.value,
+        password: password.value,
+        phone: phone.value,
+        cart: []
+    }
+    
+    //kod som ändrar guest till false
+
+    let indexOfUserLoggedIn = userArray.findIndex(object => {
+        return object.loggedin == true
+    })
+
+    userArray[indexOfUserLoggedIn].loggedin = false
+
+    userArray.push(userObj)
+    localStorage.setItem("users", JSON.stringify(userArray))
+
+    userNameshown.innerText = userObj.name
+
 })
 
 // querystrings
@@ -109,5 +147,4 @@ if (storedUser){
     })
 }
 
-console.log(userArray)
 

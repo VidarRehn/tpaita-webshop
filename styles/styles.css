@@ -78,9 +78,33 @@
 }
 
 .header .header-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: right;
   margin-right: 30px;
   font-size: 24px;
+}
+
+.header .header-icons .user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-icons .user p {
+  position: absolute;
+  font-size: 10px;
+  top: 45px;
+  text-align: center;
 }
 
 .header .header-icons .fa {
