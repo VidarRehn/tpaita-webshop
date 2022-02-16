@@ -43,6 +43,7 @@ const myFormLogin = document.querySelector(".my-form-login");
 
 myFormLogin.addEventListener("submit", (e)=>{
     e.preventDefault();
+    
 })
 
 //toggle create account page
