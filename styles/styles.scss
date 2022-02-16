@@ -121,6 +121,7 @@
             align-items: center;
             width: 243px;
             height: 400px;
+            padding: 0;
             > *{
               margin: 7px
             }
@@ -152,8 +153,6 @@
                 padding: 10px;
                 cursor: pointer;
                 border:none;
-            }
-            .create-account-btn{
                 background-color: $pink;
                 color: $white;
             }
