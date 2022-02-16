@@ -276,6 +276,24 @@ main .breadcrumbs li a:hover {
   font-weight: 500;
 }
 
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-list article {
+  height: 230px;
+  width: 150px;
+}
+
 * {
   margin: 0;
   padding: 0;
