@@ -18,7 +18,7 @@ const fillingBreadcrumbs = (jsondata) => {
 
 const productListContainer = document.querySelector(".product-list")
 
-function drawProducts(jsondata){
+async function drawProducts(jsondata){
     const params = new URLSearchParams(location.search)
     const category = params.get("category")
 
@@ -44,5 +44,40 @@ function drawProducts(jsondata){
 
 getProducts().then(data => {
     fillingBreadcrumbs(data.products)
-    drawProducts(data.products)
+    drawProducts(data.products).then(addListenerToButtons()
+    )
 })
+
+// create functionality for add-to-cart buttons
+
+function addListenerToButtons(){
+        const addToCartButtons = document.querySelectorAll(".add-to-cart-btn")
+
+        addToCartButtons.forEach(btn => {
+        btn.addEventListener("click", (x) => {
+
+            let parent = x.target.parentElement.parentElement
+            let productPrice = parent.children[1].innerText
+            let productImage = parent.children[0].src
+            let productName = parent.children[2].children[0].innerText
+
+            let userObj = {
+                image: productImage,
+                name: productName,
+                price: productPrice
+            }
+
+            let indexOfUserLoggedIn = userArray.findIndex(object => {
+                return object.loggedin == true
+            })
+
+            let userCart = userArray[indexOfUserLoggedIn].cart
+
+            userCart.push(userObj)
+
+            localStorage.setItem("users", JSON.stringify(userArray))
+
+            // find which user is logged in!
+        })
+    })
+}
