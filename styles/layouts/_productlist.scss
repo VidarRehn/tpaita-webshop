@@ -4,14 +4,30 @@
   justify-content: space-around;
   align-items: center;
 
-  article {
-    height: 230px;
-    width: 150px;
-    :hover {
-      cursor: pointer;
+    article {
+        height: 230px;
+        width: 150px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        img {
+            max-height: 100%;
+            
+        }
+
+        .price {
+            position: absolute;
+        }
+
+        .description {
+            position: absolute;
+        }
     }
   }
-}
+
 
 .product-pop-up {
   width: 100vw;

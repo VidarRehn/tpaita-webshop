@@ -1,0 +1,12 @@
+{
+    "users": [{        
+        "name": "guest",
+        "loggedin": "true",
+        "address": null,
+        "email": null,
+        "phone":  null,
+        "password": null,
+        "cart": []
+    }]
+}
+
