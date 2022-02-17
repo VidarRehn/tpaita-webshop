@@ -56,6 +56,7 @@ createAccountBtn.addEventListener("click", () =>{
 exitBoxAccount.addEventListener("click", () =>{
     createAccountPage.classList.toggle("hide")
 })
+
 // submit form events
 
 const myFormLogin = document.querySelector(".my-form-login");
@@ -84,14 +85,14 @@ myFormLogin.addEventListener("submit", (e)=>{
         }
     })
 
+    displayLoggedInUser()
+
     email.value = ""
     password.value = ""
 
     loginPage.classList.toggle("hide")
     
 })
-
-let userNameshown = document.querySelector(".user-logged-in")
 
 myFormAccount.addEventListener("submit", (e) =>{
     e.preventDefault();
@@ -129,7 +130,7 @@ myFormAccount.addEventListener("submit", (e) =>{
     userArray.push(userObj)
     localStorage.setItem("users", JSON.stringify(userArray))
 
-    userNameshown.innerText = userObj.name
+    displayLoggedInUser()
 
     firstName.value = ""
     lastName.value = ""
@@ -184,3 +185,29 @@ if (storedUser){
     })
 }
 
+
+// check user logged in
+
+let userNameshown = document.querySelector(".user-logged-in")
+let cartItemCounter = document.querySelector(".item-counter")
+
+function displayLoggedInUser(){
+
+    let indexOfUserLoggedIn = userArray.findIndex(object => {
+        return object.loggedin == true
+    })
+
+    let userLoggedIn = userArray[indexOfUserLoggedIn].name
+
+    if (userLoggedIn != "guest"){
+        userNameshown.innerText = userLoggedIn
+    }
+
+    // display number of items in cart
+
+    let itemsInCart = userArray[indexOfUserLoggedIn].cart.length
+
+    cartItemCounter.innerText = itemsInCart
+}
+
+displayLoggedInUser()
