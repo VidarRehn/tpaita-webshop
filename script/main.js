@@ -13,6 +13,7 @@ hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("hide")
         shoppingCart.classList.toggle("hide") 
     }
+    hamburger.firstElementChild.classList.toggle("is-active")
 })
 
 
