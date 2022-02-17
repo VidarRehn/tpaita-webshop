@@ -207,7 +207,13 @@ function displayLoggedInUser(){
 
     let itemsInCart = userArray[indexOfUserLoggedIn].cart.length
 
-    cartItemCounter.innerText = itemsInCart
+    if (itemsInCart > 0){
+        cartItemCounter.classList.remove("hide")
+        cartItemCounter.innerText = itemsInCart
+    } else {
+        cartItemCounter.classList.add("hide")
+    }
+
 }
 
 displayLoggedInUser()
