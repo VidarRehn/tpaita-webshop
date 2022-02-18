@@ -461,7 +461,9 @@ main .breadcrumbs li a:hover {
 }
 
 .product-list article {
-  height: 230px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 150px;
   overflow: hidden;
   display: -webkit-box;
@@ -475,38 +477,38 @@ main .breadcrumbs li a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin: 10px;
+  background: #F4F4F4;
 }
 
 .product-list article img {
-  max-height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
 .product-list article .price {
   position: absolute;
+  left: 0px;
+  background: #F4F4F4;
+  padding: 5px;
 }
 
-.product-list article .description {
-  position: absolute;
+.product-list article p {
+  font-size: 12px;
 }
 
 .product-pop-up {
   width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
+  height: 100%;
   top: 80px;
   left: 0;
   padding: 40px;
   background: #FFF;
+  position: absolute;
+}
+
+.product-pop-up img {
+  width: 100%;
 }
 
 .product-pop-up h2 {
@@ -522,6 +524,10 @@ main .breadcrumbs li a:hover {
   padding: 0 30px;
   border-radius: 5px;
   font-weight: 500;
+}
+
+.article-container {
+  margin: 10%;
 }
 
 * {
