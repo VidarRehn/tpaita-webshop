@@ -5,6 +5,7 @@
 @import "layouts/_breadcrumbs.scss";
 @import"layouts/_landing-page.scss";
 @import "layouts/_productlist.scss";
+@import "layouts/_login-page.scss";
 
 * {
     margin: 0;
@@ -20,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
 
     .login-page{
         position: absolute;
@@ -48,6 +50,8 @@
           width: 100px;
           background-color: $pink;
         }
+
+       
         .my-form-login{
           display: flex;
           flex-direction: column;
@@ -158,6 +162,16 @@
                 color: $white;
             }
         }
+=======
+    i{
+        cursor: pointer;
+    }
+    a{
+        cursor: pointer;
+    }
+    button{
+        cursor: pointer;
+>>>>>>> main
     }
 }
 

@@ -8,9 +8,9 @@ const hamburger = document.querySelector(".navbar")
 
 hamburger.addEventListener("click", () => {
     if(shoppingCart.classList.contains("hide")){
-        navLinks.classList.toggle("hide")
+        navLinks.classList.toggle("active")
     }else{
-        navLinks.classList.toggle("hide")
+        navLinks.classList.toggle("active")
         shoppingCart.classList.toggle("hide") 
     }
     hamburger.firstElementChild.classList.toggle("is-active")
@@ -22,12 +22,12 @@ const shoppingCartIcon = document.querySelector(".fa-shopping-cart")
 const shoppingCart = document.querySelector(".shopping-cart-popup")
 
 shoppingCartIcon.addEventListener("click", () => {
-    if(navLinks.classList.contains("hide")){
+    if(navLinks.classList.contains("active")){
+        navLinks.classList.toggle("active") 
         shoppingCart.classList.toggle("hide")
+        hamburger.firstElementChild.classList.toggle("is-active")
     }else{
         shoppingCart.classList.toggle("hide")
-        navLinks.classList.toggle("hide") 
-        hamburger.firstElementChild.classList.toggle("is-active")
     }
 })
 
@@ -192,6 +192,8 @@ if (storedUser){
 
 let userNameshown = document.querySelector(".user-logged-in")
 let cartItemCounter = document.querySelector(".item-counter")
+let logOutIcon = document.querySelector(".fa-sign-out")
+let userIcon = document.querySelector(".fa-user")
 
 function displayLoggedInUser(){
 
@@ -203,6 +205,10 @@ function displayLoggedInUser(){
 
     if (userLoggedIn != "guest"){
         userNameshown.innerText = userLoggedIn
+        userIcon.classList.add("hide")
+        logOutIcon.classList.remove("hide")
+    } else {
+        userNameshown.innerText = ""
     }
 
     // display number of items in cart
@@ -219,3 +225,29 @@ function displayLoggedInUser(){
 }
 
 displayLoggedInUser()
+
+function logOut(){
+
+    let indexOfUserLoggedIn = userArray.findIndex(object => {
+        return object.loggedin == true
+    })
+
+    let indexofGuest = userArray.findIndex(object => {
+        return object.name == "guest"
+    })
+
+    let userLoggedIn = userArray[indexOfUserLoggedIn]
+    let guestUser = userArray[indexofGuest]
+
+    userLoggedIn.loggedin = false
+    guestUser.loggedin = true
+    console.log(guestUser)
+    userIcon.classList.remove("hide")
+    logOutIcon.classList.add("hide")
+
+    localStorage.setItem("users", JSON.stringify(userArray))
+
+    displayLoggedInUser()
+}
+
+logOutIcon.addEventListener("click", logOut)
