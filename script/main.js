@@ -229,6 +229,7 @@ let sum = document.querySelector(".sum");
 
 function drawShoppingCart() {
   shoppingCartContent.innerHTML = "";
+  sum.innerHTML="";
   let userIndex =0;
   let totalPrice=0;
   userArray.forEach((user, userindex) => {
