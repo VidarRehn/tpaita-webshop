@@ -324,8 +324,8 @@ h1 {
 }
 
 .input1 {
-  width: 46%;
-  margin: 5px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin-bottom: 15px;
 }
 
@@ -334,9 +334,13 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.small-input-container #lastname {
+  margin-left: 15px;
 }
 
 .input2 {
@@ -355,6 +359,10 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.headline-order {
+  margin: 15px;
 }
 
 .order-form input:invalid {
