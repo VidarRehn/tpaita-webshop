@@ -8,3 +8,15 @@ $form-text:#A1A1A1;
 
 $header-font: 'Karla', sans-serif;
 $content-font: 'Red Hat Display', sans-serif;
+
+@mixin pinkbutton {
+    background-image: linear-gradient(60deg, rgb(253, 66, 181), rgb(212, 0, 89));
+    &:hover {
+        filter: brightness(90%);
+        transform: scale(1.03);
+    }
+
+    &:active {
+        filter: brightness(80%);
+    }
+}
