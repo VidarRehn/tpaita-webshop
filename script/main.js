@@ -27,6 +27,7 @@ shoppingCartIcon.addEventListener("click", () => {
     }else{
         shoppingCart.classList.toggle("hide")
         navLinks.classList.toggle("hide") 
+        hamburger.firstElementChild.classList.toggle("is-active")
     }
 })
 
