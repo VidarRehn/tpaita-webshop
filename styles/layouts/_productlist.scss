@@ -59,7 +59,7 @@ p{
     border-radius: 5px;
     font-weight: 500;
 
-    @include pinkbutton
+    @include pinkbutton()
   }
 }
 .article-container {
