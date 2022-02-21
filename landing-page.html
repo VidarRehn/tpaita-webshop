@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>t-paita</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Css-sheet -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!--- Google font --->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&family=Red+Hat+Display:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="navbar">
+          <i class="fa fa-bars"></i>
+          <div class="navlinks hide">
+            <div class="links">
+              <!-- querystrings -->
+            </div>
+            <div class="social-media-links">
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-facebook-square"></i></a>
+              <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="logo">
+          <img  src="/tpaita-webshop/images/logo.PNG" 
+          style=
+          "height:65px;
+          width:110px;
+          ">
+        </div>
+        <div class="header-icons">
+          <div class="user">
+              <i class="fa fa-user"></i>
+              <p class="user-logged-in"></p>
+          </div>
+          <i class="fa fa-shopping-cart"></i>
+          <div class="shopping-cart-popup hide"></div>
+        </div>
+      </header>
+      <div class="login-page hide">
+        <div class="exit-box-login">
+                X
+        </div>
+
+        <div class="logo">
+          <img  src="/tpaita-webshop/images/logo.PNG" 
+          style=
+          "height:65px;
+          width:110px;
+          ">
+        </div>
+
+        <form class="my-form-login" action="">
+            <input type="email" name="email" id="login-email" placeholder="email-address">
+            <input type="password" name="password" id="login-password" placeholder="password">
+            <button class="login-btn">log in</button>
+            <p class="login-paragraph">forgot password</p>
+            <button type="button" class="create-account-btn">create an account</button>
+        </form>
+    </div>
+    <div class="create-account-page hide">
+        <div class="exit-box-account">
+            X
+        </div>
+
+        <div class="logo">
+          <img  src="/tpaita-webshop/images/logo.PNG" 
+          style=
+          "height:65px;
+          width:110px;
+          ">
+        </div>
+        
+        <form class="my-form-account" action="">
+
+            <div class="first-last-name">
+                <input type="text" name="first-name" id="first-name-account" placeholder="First Name">
+                <input type="text" name="last-name" id="last-name-account" placeholder="Last Name">
+            </div>
+
+            <input type="text" name="address" id="address" placeholder="address">
+
+            <input type="text" name="zip-code" id="zip-code" placeholder="zip-code">
+
+            <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres">
+
+            <input type="password" name="password-account" id="password-account" placeholder="password">
+
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password">
+
+            <input type="tel" name="phone-number" id="phone-number" placeholder="phone number">
+            <p>by clicking sign up you agree to our terms and conditions</p>
+            <button class="sign-up-btn">sign up</button>
+        </form>
+    </div>
+
+      <main class="main-landing-page">
+        <section class="product-category">
+          <img src="./images/Tissha.jpg" alt="man with cool white t-shirt" />
+          <div class="image-text">
+            <h2>men</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
+            <button>se mer</button>
+          </div>
+        </section>
+        <section class="product-category">
+          <img
+            src="./images/dam_shirt.jpg"
+            alt="cool girl with cool white t-shirt"
+          />
+          <div class="image-text">
+            <h2>women</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
+            <button>Se mer</button>
+          </div>
+        </section>
+        <section class="product-category">
+          <img
+            src="./images/Kid-tshirt.jpg"
+            alt="crazy cool kid with cool t-shirt"
+          />
+          <div class="image-text">
+            <h2>kids</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+              quae itaque!
+            </p>
+            <button>Se mer</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="social-media-links-2">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-facebook-square"></i></a>
+        <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+      </div>
+
+      <div class="footer-text">
+        <p>Privacy | Terms & Conditions | Feedback</p>
+
+        <p>copyright. blablabla</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./script/api.js"></script>
+  <script src="./script/main.js"></script>
+</html>
