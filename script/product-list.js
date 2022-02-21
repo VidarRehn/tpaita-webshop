@@ -3,83 +3,75 @@
 const breadcrumbCategory = document.querySelector("#breadcrumb-category");
 
 const fillingBreadcrumbs = (jsondata) => {
-    const params = new URLSearchParams(location.search)
-    const category = params.get("category")
+  const params = new URLSearchParams(location.search);
+  const category = params.get("category");
 
-    if (category) {
-        const currentCategory = jsondata.find(cat => {
-            return cat.category == category;
-        })
-        
-        breadcrumbCategory.innerText = currentCategory.category
-    }
-}
+  if (category) {
+    const currentCategory = jsondata.find((cat) => {
+      return cat.category == category;
+    });
 
-const productListContainer = document.querySelector(".product-list")
+    breadcrumbCategory.innerText = currentCategory.category;
+  }
+};
 
-async function drawProducts(jsondata){
-    const params = new URLSearchParams(location.search)
-    const category = params.get("category")
+const productListContainer = document.querySelector(".product-list");
 
-    if (category) {
-        const currentCategory = jsondata.find(cat => {
-            return cat.category == category;
-        })
-        let productArray = currentCategory.items
-        productArray.forEach(prod => {
-            let article = document.createElement("article")
-            // article.setAttribute('onclick','showProduct(this)')
-            article.innerHTML = `
+async function drawProducts(jsondata) {
+  const params = new URLSearchParams(location.search);
+  const category = params.get("category");
+
+  if (category) {
+    const currentCategory = jsondata.find((cat) => {
+      return cat.category == category;
+    });
+    let productArray = currentCategory.items;
+    productArray.forEach((prod) => {
+      let article = document.createElement("article");
+      // article.setAttribute('onclick','showProduct(this)')
+      article.innerHTML = `
             <img src="${prod.image}" alt="" onClick="showProduct(this)" />
             <div class="price">${prod.price}</div>
             <div class="description">
                 <p class="product-name">${prod.name}</p>
                 <p class="product-description">${prod.description}</p>
-                <button class="add-to-cart-btn">Add to cart</button>
+                <button class="add-to-cart-btn" onClick="addProductToCart(this)" >Add to cart</button>
             </div>`;
       productListContainer.append(article);
     });
   }
 }
 
-getProducts().then(data => {
-    fillingBreadcrumbs(data.products)
-    drawProducts(data.products).then(addListenerToButtons()
-    )
-})
+getProducts().then((data) => {
+  fillingBreadcrumbs(data.products);
+  drawProducts(data.products);
+});
 
 // create functionality for add-to-cart buttons
 
-function addListenerToButtons(){
-        const addToCartButtons = document.querySelectorAll(".add-to-cart-btn")
+function addProductToCart(x) {
+  let parent = x.parentElement.parentElement;
+  let productPrice = parent.children[1].innerText;
+  let productImage = parent.children[0].src;
+  let productName = parent.children[2].children[0].innerText;
 
-        addToCartButtons.forEach(btn => {
-        btn.addEventListener("click", (x) => {
+  let userObj = {
+    image: productImage,
+    name: productName,
+    price: productPrice,
+  };
 
-            let parent = x.target.parentElement.parentElement
-            let productPrice = parent.children[1].innerText
-            let productImage = parent.children[0].src
-            let productName = parent.children[2].children[0].innerText
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
 
-            let userObj = {
-                image: productImage,
-                name: productName,
-                price: productPrice
-            }
+  let userCart = userArray[indexOfUserLoggedIn].cart;
 
-            let indexOfUserLoggedIn = userArray.findIndex(object => {
-                return object.loggedin == true
-            })
+  userCart.push(userObj);
 
-            let userCart = userArray[indexOfUserLoggedIn].cart
+  localStorage.setItem("users", JSON.stringify(userArray));
 
-            userCart.push(userObj)
-
-            localStorage.setItem("users", JSON.stringify(userArray))
-
-            displayLoggedInUser()
-        })
-    })
+  displayLoggedInUser();
 }
 
 //TOGGLE PRODUCT DETAILS
@@ -88,9 +80,11 @@ const productPopUp = document.querySelector("#product-pop-up");
 let productContainer = document.querySelector(".article-container");
 let title = document.querySelector(".product-name-title");
 function showProduct(x) {
-  productContainer.innerHTML="";
-if(productPopUp.classList.contains("hide")){
-productContainer.innerHTML=x.parentElement.innerHTML;
-title.innerText=x.parentElement.lastChild.firstElementChild.innerText}
+    window.scrollTo(0, 0);
+  productContainer.innerHTML = "";
+  if (productPopUp.classList.contains("hide")) {
+    productContainer.innerHTML = x.parentElement.innerHTML;
+    title.innerText = x.parentElement.lastChild.firstElementChild.innerText;
+  }
   productPopUp.classList.toggle("hide");
 }
