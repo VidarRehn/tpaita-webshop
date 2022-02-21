@@ -15,8 +15,8 @@
   }
 
   .logo {
-      height: 60px;
-      background-color: $pink;
+      display: flex;
+      justify-content: center;
   }
 
   .navbar {

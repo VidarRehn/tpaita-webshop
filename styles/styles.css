@@ -23,8 +23,12 @@
 }
 
 .header .logo {
-  height: 60px;
-  background-color: #F700FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header .navbar {
