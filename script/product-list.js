@@ -45,7 +45,7 @@ async function drawProducts(jsondata) {
 getProducts().then((data) => {
   fillingBreadcrumbs(data.products);
   drawProducts(data.products);
-});
+}).then(searchFilter);
 
 // create functionality for add-to-cart buttons
 
@@ -87,4 +87,24 @@ function showProduct(x) {
     title.innerText = x.parentElement.lastChild.firstElementChild.innerText;
   }
   productPopUp.classList.toggle("hide");
+}
+
+const searchInput = document.querySelector("#filter");
+
+function searchFilter () {
+  let itemsOnPage = document.querySelectorAll("article");
+
+  searchInput.addEventListener("input", () => {
+    itemsOnPage.forEach(article => {
+      article.classList.remove("hide")
+      let description = article.childNodes[5].childNodes[3].innerText
+      let name = article.childNodes[5].childNodes[1].innerText
+
+      if(description.includes(searchInput.value) || name.includes(searchInput.value)){
+      }else {
+        article.classList.add("hide")
+      }
+
+    })
+  })
 }
