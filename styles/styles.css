@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   height: 80px;
   width: 100%;
@@ -272,10 +271,7 @@
 }
 
 .footer {
-  position: relative;
-  /*ändra */
   padding: 10px 10px 0px 10px;
-  bottom: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,6 +286,7 @@
   -webkit-box-shadow: 0 -4px 10px 0 #a1a1a1;
           box-shadow: 0 -4px 10px 0 #a1a1a1;
   background-color: #FFF;
+  padding-bottom: 10px;
 }
 
 .footer .social-media-links-2 i {
@@ -412,7 +409,6 @@ main .breadcrumbs li a:hover {
 
 .main-landing-page {
   margin-top: 80px;
-  margin-bottom: 80px;
 }
 
 .main-landing-page .product-category {
