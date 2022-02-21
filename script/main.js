@@ -8,9 +8,9 @@ const hamburger = document.querySelector(".navbar")
 
 hamburger.addEventListener("click", () => {
     if(shoppingCart.classList.contains("hide")){
-        navLinks.classList.toggle("hide")
+        navLinks.classList.toggle("active")
     }else{
-        navLinks.classList.toggle("hide")
+        navLinks.classList.toggle("active")
         shoppingCart.classList.toggle("hide") 
     }
     hamburger.firstElementChild.classList.toggle("is-active")
@@ -22,12 +22,12 @@ const shoppingCartIcon = document.querySelector(".fa-shopping-cart")
 const shoppingCart = document.querySelector(".shopping-cart-popup")
 
 shoppingCartIcon.addEventListener("click", () => {
-    if(navLinks.classList.contains("hide")){
+    if(navLinks.classList.contains("active")){
+        navLinks.classList.toggle("active") 
         shoppingCart.classList.toggle("hide")
+        hamburger.firstElementChild.classList.toggle("is-active")
     }else{
         shoppingCart.classList.toggle("hide")
-        navLinks.classList.toggle("hide") 
-        hamburger.firstElementChild.classList.toggle("is-active")
     }
 })
 
