@@ -26,6 +26,7 @@ shoppingCartIcon.addEventListener("click", () => {
     }else{
         shoppingCart.classList.toggle("hide")
     }
+    drawShoppingCart();
 })
 
 // toggle login page
@@ -224,25 +225,50 @@ function displayLoggedInUser() {
 
 let shoppingCartContent = document.querySelector(".shopping-cart-contents");
 let priceDetails = document.querySelector(".shopping-cart-details");
+let sum = document.querySelector(".sum");
 
 function drawShoppingCart() {
-  let userIndex = 0;
+  shoppingCartContent.innerHTML = "";
+  let userIndex =0;
+  let totalPrice=0;
   userArray.forEach((user, userindex) => {
-    if (user.loggedin) {userIndex = userindex;  }
+    if (user.loggedin) {userIndex=userindex}
   });
+
 const userCart = userArray[userIndex].cart;
 console.log(userCart);
 userCart.forEach((item,index) => {
 let section = document.createElement("section");
 section.setAttribute('id', index);
-section.innerHTML= `<img src="${item.image}" alt="product image">
+section.innerHTML= `<div><img src="${item.image}" alt="product image">
 <div>
 <h3>${item.name}</h3>
-<p>${item.price}</p>
-<p></p>
-<div class="delete-product">X</div></div>`
+<p>${item.price} SEK</p>
+</div>
+</div>
+<div class="quantity-check"><i class="fa fa-trash-can"></i>
+<div class="plus-minus">
+</div>
+</div>`
     shoppingCartContent.append(section);
+
+let itemPrice = document.createElement("div");
+itemPrice.setAttribute('class', 'price-item');
+itemPrice.innerHTML=`
+<p>1x ${item.name}</p>
+<p>${item.price}</p>
+`
+priceDetails.append(itemPrice)
+totalPrice+=parseInt(item.price);
 });
+console.log(shoppingCartContent)
+
+//ADD TOTAL SUM PART
+sum.innerHTML = `
+<p>TOTAL</p>
+<p>${totalPrice} SEK</p>
+`
+
 
 }
 
