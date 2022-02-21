@@ -13,13 +13,33 @@
   z-index: 100;
   .exit-box-login{
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       top: -50px;
       right: -150px;
       padding: 0px;
       font-size: 40px;
       font-weight: 900;
       color: $gray;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
+      span{
+        border-radius: 10px;
+        position: absolute;
+        height: 4px;
+        background: $gray;
+      }
+      span:nth-child(1){
+        width: 30px;
+        transform: rotate(45deg);
+      }
+      span:nth-child(2){
+        width: 30px;
+        transform: rotate(-45deg);
+      }
+
   }
   .logo{
     height: 60px;
@@ -80,6 +100,9 @@
   z-index: 100;
   .exit-box-account{
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       top: -50px;
       right: -150px;
       padding: 0px;
@@ -87,6 +110,22 @@
       font-weight: 900;
       color: $gray;
       cursor: pointer;
+      width: 30px;
+      height: 30px;
+      span{
+        border-radius: 10px;
+        position: absolute;
+        height: 4px;
+        background: $gray;
+      }
+      span:nth-child(1){
+        width: 30px;
+        transform: rotate(45deg);
+      }
+      span:nth-child(2){
+        width: 30px;
+        transform: rotate(-45deg);
+      }
   }
   .logo{
       height: 60px;
