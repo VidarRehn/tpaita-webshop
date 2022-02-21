@@ -28,9 +28,9 @@ async function drawProducts(jsondata){
         let productArray = currentCategory.items
         productArray.forEach(prod => {
             let article = document.createElement("article")
-            article.setAttribute('onclick','showProduct(this)')
+            // article.setAttribute('onclick','showProduct(this)')
             article.innerHTML = `
-            <img src="${prod.image}" alt=""/>
+            <img src="${prod.image}" alt="" onClick="showProduct(this)" />
             <div class="price">${prod.price}</div>
             <div class="description">
                 <p class="product-name">${prod.name}</p>
@@ -77,6 +77,7 @@ function addListenerToButtons(){
 
             localStorage.setItem("users", JSON.stringify(userArray))
 
+            displayLoggedInUser()
         })
     })
 }
@@ -85,10 +86,11 @@ function addListenerToButtons(){
 
 const productPopUp = document.querySelector("#product-pop-up");
 let productContainer = document.querySelector(".article-container");
-
+let title = document.querySelector(".product-name-title");
 function showProduct(x) {
-  console.log(x.innerHTML);
   productContainer.innerHTML="";
-productContainer.innerHTML=x.innerHTML
+if(productPopUp.classList.contains("hide")){
+productContainer.innerHTML=x.parentElement.innerHTML;
+title.innerText=x.parentElement.lastChild.firstElementChild.innerText}
   productPopUp.classList.toggle("hide");
 }

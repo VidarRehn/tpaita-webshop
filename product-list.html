@@ -24,7 +24,11 @@
     <div class="wrapper">
         <header class="header">
           <nav class="navbar">
-            <i class="fa fa-bars"></i>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
             <div class="navlinks hide">
               <div class="links">
                 <!-- querystrings -->
@@ -43,7 +47,9 @@
                 <i class="fa fa-user"></i>
                 <p class="user-logged-in"></p>
             </div>
-            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-shopping-cart">
+              <div class="item-counter hide"></div>
+            </i>
             <div class="shopping-cart-popup hide"></div>
           </div>
         </header>
@@ -96,13 +102,10 @@
         <section class="product-list"></section>
       </main>
 
-
       <aside class="product-pop-up hide" id="product-pop-up">
-        <button onclick= "showProduct(this)">Back</button>
-<div class="article-container">
-    
-</div>
-
+        <button onclick="showProduct(this)"> < Back</button>
+        <h1 class="product-name-title"></h1>
+        <div class="article-container"></div>
       </aside>
 
       <footer class="footer">
