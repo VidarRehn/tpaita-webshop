@@ -1,5 +1,5 @@
 .footer {
-  position: fixed;  /*ändra */
+  position: relative;  /*ändra */
   padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
@@ -7,24 +7,27 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 0 -4px 10px 0 rgb(161, 161, 161);
+  background-color: $white;
  
   
 
    .social-media-links-2 {
-     
-
       i {
         margin: 10px;
+        color: $gray;
       }
 }
 
     p.fake-links {
   font-size: 14px;
+  color: $gray;
+  
 }
     p.copywrite {
   display: flex;
   justify-content: center;
   font-size: 10px;
+  color: $gray
 }
 
 
