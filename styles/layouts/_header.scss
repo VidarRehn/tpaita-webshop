@@ -57,7 +57,7 @@
         &:hover{
           span:nth-child(2){
             transform: translateX(5px);
-            background: $pink;
+            background-image: linear-gradient(60deg, rgb(253, 66, 181), rgb(212, 0, 89));
           }
         }
       }
@@ -78,7 +78,6 @@
         &:hover{
           span:nth-child(2){
             transform: translateX(40px);
-            background: $pink;
           }
         }
       }
