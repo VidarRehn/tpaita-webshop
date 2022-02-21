@@ -284,26 +284,32 @@ displayLoggedInUser()
 
 function logOut(){
 
-    let indexOfUserLoggedIn = userArray.findIndex(object => {
+    let areYouSure = confirm("Are you sure you want to log out");
+
+    if (areYouSure == true){
+
+      let indexOfUserLoggedIn = userArray.findIndex(object => {
         return object.loggedin == true
-    })
+      })
 
-    let indexofGuest = userArray.findIndex(object => {
-        return object.name == "guest"
-    })
+      let indexofGuest = userArray.findIndex(object => {
+          return object.name == "guest"
+      })
 
-    let userLoggedIn = userArray[indexOfUserLoggedIn]
-    let guestUser = userArray[indexofGuest]
+      let userLoggedIn = userArray[indexOfUserLoggedIn]
+      let guestUser = userArray[indexofGuest]
 
-    userLoggedIn.loggedin = false
-    guestUser.loggedin = true
-    console.log(guestUser)
-    userIcon.classList.remove("hide")
-    logOutIcon.classList.add("hide")
+      userLoggedIn.loggedin = false
+      guestUser.loggedin = true
+      console.log(guestUser)
+      userIcon.classList.remove("hide")
+      logOutIcon.classList.add("hide")
 
-    localStorage.setItem("users", JSON.stringify(userArray))
+      localStorage.setItem("users", JSON.stringify(userArray))
 
-    displayLoggedInUser()
+      displayLoggedInUser()
+
+    }
 }
 
 logOutIcon.addEventListener("click", logOut)
