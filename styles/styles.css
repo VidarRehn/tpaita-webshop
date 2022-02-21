@@ -87,7 +87,7 @@
 .header .navbar .hamburger:hover span:nth-child(2) {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
-  background: #F700FC;
+  background-image: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .header .navbar .is-active span:nth-child(1) {
@@ -114,7 +114,6 @@
 .header .navbar .is-active:hover span:nth-child(2) {
   -webkit-transform: translateX(40px);
           transform: translateX(40px);
-  background: #F700FC;
 }
 
 .header .navbar .navlinks {
