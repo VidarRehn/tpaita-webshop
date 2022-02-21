@@ -245,7 +245,7 @@
 }
 
 .header .header-icons .fa-shopping-cart .item-counter {
-  background-color: #F700FC;
+  background-image: linear-gradient(60deg, #fd42b5, #d40059);
   position: absolute;
   top: 3px;
   right: 0px;
