@@ -21,6 +21,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    i{
+        cursor: pointer;
+    }
+    a{
+        cursor: pointer;
+    }
+    button{
+        cursor: pointer;
+    }
 }
 
 

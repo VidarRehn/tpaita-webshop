@@ -48,6 +48,7 @@
           justify-content: center;
   overflow: hidden;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .header .navbar .hamburger span {
@@ -783,5 +784,17 @@ main .breadcrumbs li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wrapper i {
+  cursor: pointer;
+}
+
+.wrapper a {
+  cursor: pointer;
+}
+
+.wrapper button {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
