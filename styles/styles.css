@@ -52,15 +52,14 @@
 }
 
 .header .navbar .hamburger span {
-  background-color: black;
   border-radius: 10px;
   position: absolute;
   height: 4px;
+  background: #989898;
 }
 
 .header .navbar .hamburger span:nth-child(1) {
   width: 30px;
-  background: black;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-transition: 0.8s;
@@ -69,14 +68,12 @@
 
 .header .navbar .hamburger span:nth-child(2) {
   width: 30px;
-  background: black;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .header .navbar .hamburger span:nth-child(3) {
   width: 30px;
-  background: black;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   -webkit-transition: 0.8s;
@@ -128,7 +125,7 @@
   position: absolute;
   top: 80px;
   font-size: 24px;
-  background-color: white;
+  background-color: #FFF;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -155,6 +152,7 @@
 .header .navbar .navlinks .links a {
   text-decoration: none;
   margin-top: 20px;
+  color: #989898;
 }
 
 .header .navbar .navlinks .social-media-links {
@@ -167,6 +165,7 @@
 
 .header .navbar .navlinks .social-media-links i {
   margin-right: 10px;
+  color: #989898;
 }
 
 .header .navbar .active {
@@ -218,10 +217,12 @@
   font-size: 10px;
   top: 35px;
   text-align: center;
+  color: #989898;
 }
 
 .header .header-icons .fa {
   padding: 10px;
+  color: #989898;
 }
 
 .header .header-icons .shopping-cart-popup {
@@ -270,34 +271,8 @@
   display: none !important;
 }
 
-.is-active span:nth-child(1) {
-  -webkit-transform: translate(2px, -12px);
-          transform: translate(2px, -12px);
-  background: #F700FC;
-}
-
-.is-active span:nth-child(2) {
-  -webkit-transform: translate(0px) rotate(45deg);
-          transform: translate(0px) rotate(45deg);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-.is-active span:nth-child(3) {
-  -webkit-transform: translate(2px, 4px);
-          transform: translate(2px, 4px);
-  background: #F700FC;
-}
-
-.is-active span:nth-child(4) {
-  -webkit-transform: translate(0px) rotate(-45deg);
-          transform: translate(0px) rotate(-45deg);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
 .footer {
-  position: fixed;
+  position: relative;
   /*ändra */
   padding: 10px 10px 0px 10px;
   bottom: 0;
@@ -314,14 +289,17 @@
           flex-direction: column;
   -webkit-box-shadow: 0 -4px 10px 0 #a1a1a1;
           box-shadow: 0 -4px 10px 0 #a1a1a1;
+  background-color: #FFF;
 }
 
 .footer .social-media-links-2 i {
   margin: 10px;
+  color: #989898;
 }
 
 .footer p.fake-links {
   font-size: 14px;
+  color: #989898;
 }
 
 .footer p.copywrite {
@@ -332,6 +310,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 10px;
+  color: #989898;
 }
 
 main {
@@ -571,6 +550,209 @@ main .breadcrumbs li a:hover {
   margin: 10%;
 }
 
+.login-page {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  z-index: 100;
+}
+
+.login-page .exit-box-login {
+  position: relative;
+  top: -50px;
+  right: -150px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #989898;
+  cursor: pointer;
+}
+
+.login-page .logo {
+  height: 60px;
+  width: 100px;
+  background-color: #F700FC;
+}
+
+.login-page .my-form-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 400px;
+  padding: 0px;
+}
+
+.login-page .my-form-login > * {
+  margin: 7px;
+}
+
+.login-page .my-form-login .login-btn {
+  background-color: #F700FC;
+  color: #FFF;
+}
+
+.login-page .my-form-login .create-account-btn {
+  background-color: #49C000;
+  color: #FFF;
+}
+
+.login-page .my-form-login input {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  color: #A1A1A1;
+  border: none;
+}
+
+.login-page .my-form-login p {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.login-page .my-form-login button {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.create-account-page {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  z-index: 100;
+}
+
+.create-account-page .exit-box-account {
+  position: relative;
+  top: -50px;
+  right: -150px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #989898;
+  cursor: pointer;
+}
+
+.create-account-page .logo {
+  height: 60px;
+  width: 100px;
+  background-color: #F700FC;
+}
+
+.create-account-page .my-form-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 0;
+}
+
+.create-account-page .my-form-account > * {
+  margin: 7px;
+}
+
+.create-account-page .my-form-account .first-last-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.create-account-page .my-form-account .first-last-name input {
+  width: 48%;
+}
+
+.create-account-page .my-form-account input {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  color: #A1A1A1;
+  border: none;
+}
+
+.create-account-page .my-form-account p {
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.create-account-page .my-form-account button {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #F700FC;
+  color: #FFF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -593,208 +775,5 @@ main .breadcrumbs li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.wrapper .login-page {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  z-index: 100;
-}
-
-.wrapper .login-page .exit-box-login {
-  position: relative;
-  top: -50px;
-  right: -150px;
-  padding: 0px;
-  font-size: 40px;
-  font-weight: 900;
-  color: #989898;
-  cursor: pointer;
-}
-
-.wrapper .login-page .logo {
-  height: 60px;
-  width: 100px;
-  background-color: #F700FC;
-}
-
-.wrapper .login-page .my-form-login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 300px;
-  height: 400px;
-  padding: 0px;
-}
-
-.wrapper .login-page .my-form-login > * {
-  margin: 7px;
-}
-
-.wrapper .login-page .my-form-login .login-btn {
-  background-color: #F700FC;
-  color: #FFF;
-}
-
-.wrapper .login-page .my-form-login .create-account-btn {
-  background-color: #49C000;
-  color: #FFF;
-}
-
-.wrapper .login-page .my-form-login input {
-  width: 100%;
-  height: 44px;
-  padding: 10px;
-  background-color: #EEEEEE;
-  color: #A1A1A1;
-  border: none;
-}
-
-.wrapper .login-page .my-form-login p {
-  font-size: 10px;
-  cursor: pointer;
-}
-
-.wrapper .login-page .my-form-login button {
-  width: 100%;
-  height: 44px;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-
-.wrapper .create-account-page {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  z-index: 100;
-}
-
-.wrapper .create-account-page .exit-box-account {
-  position: relative;
-  top: -50px;
-  right: -150px;
-  padding: 0px;
-  font-size: 40px;
-  font-weight: 900;
-  color: #989898;
-  cursor: pointer;
-}
-
-.wrapper .create-account-page .logo {
-  height: 60px;
-  width: 100px;
-  background-color: #F700FC;
-}
-
-.wrapper .create-account-page .my-form-account {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 300px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  padding: 0;
-}
-
-.wrapper .create-account-page .my-form-account > * {
-  margin: 7px;
-}
-
-.wrapper .create-account-page .my-form-account .first-last-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.wrapper .create-account-page .my-form-account .first-last-name input {
-  width: 48%;
-}
-
-.wrapper .create-account-page .my-form-account input {
-  width: 100%;
-  height: 44px;
-  padding: 10px;
-  background-color: #EEEEEE;
-  color: #A1A1A1;
-  border: none;
-}
-
-.wrapper .create-account-page .my-form-account p {
-  font-size: 10px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.wrapper .create-account-page .my-form-account button {
-  width: 100%;
-  height: 44px;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  background-color: #F700FC;
-  color: #FFF;
 }
 /*# sourceMappingURL=styles.css.map */
