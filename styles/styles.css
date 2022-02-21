@@ -48,6 +48,7 @@
           justify-content: center;
   overflow: hidden;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .header .navbar .hamburger span {
@@ -617,13 +618,43 @@ button:active {
 
 .login-page .exit-box-login {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: -50px;
   right: -150px;
   padding: 0px;
   font-size: 40px;
   font-weight: 900;
   color: #989898;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
+}
+
+.login-page .exit-box-login span {
+  border-radius: 10px;
+  position: absolute;
+  height: 4px;
+  background: #989898;
+}
+
+.login-page .exit-box-login span:nth-child(1) {
+  width: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.login-page .exit-box-login span:nth-child(2) {
+  width: 30px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .login-page .logo {
@@ -712,6 +743,15 @@ button:active {
 
 .create-account-page .exit-box-account {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: -50px;
   right: -150px;
   padding: 0px;
@@ -719,6 +759,27 @@ button:active {
   font-weight: 900;
   color: #989898;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.create-account-page .exit-box-account span {
+  border-radius: 10px;
+  position: absolute;
+  height: 4px;
+  background: #989898;
+}
+
+.create-account-page .exit-box-account span:nth-child(1) {
+  width: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.create-account-page .exit-box-account span:nth-child(2) {
+  width: 30px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .create-account-page .logo {
@@ -817,5 +878,17 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wrapper i {
+  cursor: pointer;
+}
+
+.wrapper a {
+  cursor: pointer;
+}
+
+.wrapper button {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
