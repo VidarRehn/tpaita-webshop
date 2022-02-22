@@ -96,8 +96,9 @@
   display: flex;
   input {
     flex-basis: 60%;
-  }
-  button {
-    flex-basis: 40%;
-  }
+}
+button{
+    flex-basis:40%;
+    background-image: $green;
+}
 }
