@@ -103,8 +103,7 @@ function searchFilter () {
       if(description.includes(searchInput.value) || name.includes(searchInput.value)){
       }else {
         article.classList.add("hide")
-      }
-
+      } 
     })
   })
 }
