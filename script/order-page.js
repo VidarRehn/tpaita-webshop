@@ -8,14 +8,16 @@ const form = document.forms[2]
 const callButton = document.querySelector('.pay-button');
 const popup = document.querySelector('.popup');
 const closeButton = popup.querySelector('.close-button');
+
 form.addEventListener('submit', (e) => { 
   e.preventDefault();
   console.log("byter sida")
-  popupToggle = () => {
+  const popupToggle = () => {
     popup.classList.toggle('popup-opened');
+    
   }
-  
-  callButton.addEventListener('click', popupToggle);
+ 
+  popupToggle()
   
   
   
