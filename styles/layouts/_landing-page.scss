@@ -1,5 +1,9 @@
 .main-landing-page {
   margin-top: 80px;
+
+  @media (min-width: 850px) {
+    display: flex;
+  }
   .product-category {
     overflow: hidden;
     display: flex;

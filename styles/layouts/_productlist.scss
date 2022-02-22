@@ -37,6 +37,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 20px;
   
 
   article {
@@ -49,7 +50,7 @@
     position: relative;
     margin: 10px;
     background: #F4F4F4;
-    @media(min-width: 900px){
+    @media(min-width: 850px){
       flex-basis: 21%;
     }
     img {
