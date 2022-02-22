@@ -234,6 +234,9 @@ let shoppingCartContent = document.querySelector(".shopping-cart-contents");
 let priceDetails = document.querySelector(".shopping-cart-details");
 let sum = document.querySelector(".sum");
 
+
+
+
 function drawShoppingCart() {
   shoppingCartContent.innerHTML = "";
   priceDetails.innerHTML="";
@@ -251,11 +254,14 @@ section.setAttribute('id', index);
 section.innerHTML= `<div><img src="${item.image}" alt="product image">
 <div>
 <h3>${item.name}</h3>
-<p>${item.price} SEK</p>
+<p>${item.price},00 SEK</p>
 </div>
 </div>
-<div class="quantity-check"><i class="fa fa-trash-can"></i>
+<div class="quantity-check"><i onClick="deleteItem(this)" class="fa fa-trash"></i>
 <div class="plus-minus">
+<div onClick="">-</div>
+<div>1</div>
+<div onClick="">+</div>
 </div>
 </div>`
     shoppingCartContent.append(section);
@@ -264,7 +270,7 @@ let itemPrice = document.createElement("div");
 itemPrice.setAttribute('class', 'price-item');
 itemPrice.innerHTML=`
 <p>1x ${item.name}</p>
-<p>${item.price}</p>
+<p>${item.price},00</p>
 `
 priceDetails.append(itemPrice)
 totalPrice+=parseInt(item.price);
@@ -274,11 +280,25 @@ console.log(shoppingCartContent)
 //ADD TOTAL SUM PART
 sum.innerHTML = `
 <p>TOTAL</p>
-<p>${totalPrice} SEK</p>
+<p>${totalPrice},00 SEK</p>
 `
 
-
 }
+
+//hämta id från parent section och kicka det från cart arrayen  (stackade items kommer sen)
+
+function deleteItem(x) {
+  let userIndex =0;
+  userArray.forEach((user, userindex) => {
+    if (user.loggedin) {userIndex=userindex}
+  });
+  console.log(userArray[userIndex].cart)
+  let deletedItem = userArray[userIndex].cart.splice(x.parentElement.parentElement.id, 1);
+  console.log(deletedItem)
+
+  drawShoppingCart()
+}
+
 
 displayLoggedInUser()
 
