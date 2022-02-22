@@ -217,7 +217,7 @@ function displayLoggedInUser() {
     userNameshown.innerText = userLoggedIn;
   }
 
-  // display number of items in cart
+
     if (userLoggedIn != "guest"){
         userNameshown.innerText = userLoggedIn
         userIcon.classList.add("hide")
@@ -226,11 +226,18 @@ function displayLoggedInUser() {
         userNameshown.innerText = ""
     }
 
-  let itemsInCart = userArray[indexOfUserLoggedIn].cart.length;
+      // display number of items in cart
 
-  if (itemsInCart > 0) {
+  let itemsInCart = userArray[indexOfUserLoggedIn].cart;
+  let counter = 0
+
+  itemsInCart.forEach(item => {
+    counter += item.quantity
+  })
+
+  if (counter > 0) {
     cartItemCounter.classList.remove("hide");
-    cartItemCounter.innerText = itemsInCart;
+    cartItemCounter.innerText = counter;
   } else {
     cartItemCounter.classList.add("hide");
   }
@@ -280,9 +287,9 @@ section.innerHTML= `<div><img src="${item.image}" alt="product image">
 </div>
 <div class="quantity-check"><i onClick="deleteItem(this)" class="fa fa-trash"></i>
 <div class="plus-minus">
-<div onClick="">-</div>
-<div>1</div>
-<div onClick="">+</div>
+<div onClick="decreaseQuantity(this)">-</div>
+<div class="quantity-counter">${item.quantity}</div>
+<div onClick="increaseQuantity(this)">+</div>
 </div>
 </div>`
     shoppingCartContent.append(section);
@@ -290,11 +297,11 @@ section.innerHTML= `<div><img src="${item.image}" alt="product image">
 let itemPrice = document.createElement("div");
 itemPrice.setAttribute('class', 'price-item');
 itemPrice.innerHTML=`
-<p>1x ${item.name}</p>
-<p>${item.price},00</p>
+<p>${item.quantity}x ${item.name}</p>
+<p>${(item.price)*(item.quantity)},00</p>
 `
 priceDetails.append(itemPrice)
-totalPrice+=parseInt(item.price);
+totalPrice+=parseInt((item.price)*(item.quantity));
 });}
 
 //ADD TOTAL SUM PART
@@ -351,3 +358,47 @@ function logOut(){
 }
 
 logOutIcon.addEventListener("click", logOut)
+
+function decreaseQuantity(x){
+  let name = x.parentElement.parentElement.parentElement.firstElementChild.lastElementChild.firstElementChild.innerText
+
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
+
+  let userCart = userArray[indexOfUserLoggedIn].cart;
+
+  userCart.forEach(item => {
+    if (item.name == name){
+      if (item.quantity > 1){
+          item.quantity--
+      }
+    } 
+  })
+
+  localStorage.setItem("users", JSON.stringify(userArray));
+
+  displayLoggedInUser();
+  drawShoppingCart()
+}
+
+function increaseQuantity(x){
+  let name = x.parentElement.parentElement.parentElement.firstElementChild.lastElementChild.firstElementChild.innerText
+
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
+
+  let userCart = userArray[indexOfUserLoggedIn].cart;
+
+  userCart.forEach(item => {
+    if (item.name == name){
+      item.quantity++
+    } 
+  })
+
+  localStorage.setItem("users", JSON.stringify(userArray));
+
+  displayLoggedInUser();
+  drawShoppingCart()
+}
