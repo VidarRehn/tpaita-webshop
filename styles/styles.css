@@ -302,6 +302,29 @@ main {
   margin-top: 80px;
 }
 
+main .order-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+@media (min-width: 500px) {
+  main .order-container {
+    max-width: 500px;
+  }
+}
+
 input {
   background-color: #EEEEEE;
   height: 50px;
@@ -376,6 +399,45 @@ form {
 .order-form input:focus {
   border: 2px solid yellow;
   outline: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-title {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.popup-container {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  padding: 15px;
+}
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-opened {
+  visibility: visible;
+  opacity: 1;
 }
 
 main {
@@ -721,6 +783,7 @@ button:active {
   border: solid 1px black;
   border-radius: 20px;
   overflow: hidden;
+  background: #989898;
 }
 
 .shopping-cart-popup .shopping-cart-contents .plus-minus div {
@@ -729,8 +792,8 @@ button:active {
   text-align: center;
 }
 
-.shopping-cart-popup .shopping-cart-contents .plus-minus div:first-of-type, .shopping-cart-popup .shopping-cart-contents .plus-minus div:last-of-type {
-  background: #989898;
+.shopping-cart-popup .shopping-cart-contents .plus-minus div:nth-child(2) {
+  background: white;
 }
 
 .shopping-cart-popup .shopping-cart-contents .plus-minus div:first-of-type:hover, .shopping-cart-popup .shopping-cart-contents .plus-minus div:last-of-type:hover {

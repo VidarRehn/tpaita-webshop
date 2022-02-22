@@ -292,10 +292,10 @@ function deleteItem(x) {
   userArray.forEach((user, userindex) => {
     if (user.loggedin) {userIndex=userindex}
   });
-  console.log(userArray[userIndex].cart)
   let deletedItem = userArray[userIndex].cart.splice(x.parentElement.parentElement.id, 1);
   console.log(deletedItem)
-
+  localStorage.setItem("users", JSON.stringify(userArray));
+  displayLoggedInUser() 
   drawShoppingCart()
 }
 
