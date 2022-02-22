@@ -515,14 +515,13 @@ main .breadcrumbs li a:hover {
 
 .product-pop-up {
   width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: calc(100vh - 79px);
   top: 80px;
   left: 0;
   padding: 40px;
   background: #FFF;
-  position: absolute;
+  position: fixed;
+  overflow: auto;
 }
 
 .product-pop-up img {
@@ -584,7 +583,7 @@ button:active {
 
 .shopping-cart-popup {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 79px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,6 +606,10 @@ button:active {
   margin-right: 10px;
 }
 
+.shopping-cart-popup .shopping-cart-contents .fa-trash {
+  color: #fd42b5;
+}
+
 .shopping-cart-popup .shopping-cart-contents section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,7 +617,7 @@ button:active {
   margin: 20px 0;
 }
 
-.shopping-cart-popup .shopping-cart-contents section div:first-child {
+.shopping-cart-popup .shopping-cart-contents section > div:not(.quantity-check) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,6 +627,35 @@ button:active {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid #989898;
+}
+
+.shopping-cart-popup .shopping-cart-contents .plus-minus {
+  width: 70px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.shopping-cart-popup .shopping-cart-contents .plus-minus div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.shopping-cart-popup .shopping-cart-contents .plus-minus div:first-of-type, .shopping-cart-popup .shopping-cart-contents .plus-minus div:last-of-type {
+  background: #989898;
+}
+
+.shopping-cart-popup .shopping-cart-contents .plus-minus div:first-of-type:hover, .shopping-cart-popup .shopping-cart-contents .plus-minus div:last-of-type:hover {
+  cursor: pointer;
+}
+
+.shopping-cart-popup .shopping-cart-details {
+  margin-top: 20px;
 }
 
 .price-item {
@@ -648,6 +680,27 @@ button:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.fa-trash {
+  color: #F700FC;
+}
+
+.promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promo input {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.promo button {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
 }
 
 .login-page {
