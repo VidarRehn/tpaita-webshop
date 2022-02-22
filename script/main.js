@@ -402,3 +402,108 @@ function increaseQuantity(x){
   displayLoggedInUser();
   drawShoppingCart()
 }
+
+
+
+// receipt
+
+function validation() {
+  const inputfield1 = document.querySelectorAll(".input1").required;
+  const inputfield2 = document.querySelectorAll(".input2").required;
+  document.getElementById("demo").innerHTML = inputfield1 + inputfield2;
+}
+
+const form = document.forms[2]
+const callButton = document.querySelector('.pay-button');
+const popup = document.querySelector('.popup');
+const closeButton = document.querySelector('.close-button');
+const receipt = document.querySelector(".product-receipt")
+const receiptSum = document.querySelector(".receipt-sum")
+
+form.addEventListener('submit', (e) => { 
+  e.preventDefault();
+  const popupToggle = () => {
+    popup.classList.toggle('popup-opened');
+  }
+  popupToggle()
+  fillReceipt()
+
+})
+
+closeButton.addEventListener('click', (e) => { 
+  console.log("hej")
+  window.location.href = "index.html"
+  clearCart()
+})
+
+const firstNameInput = document.querySelector("#firstname")
+const lastNameInput = document.querySelector("#lastname")
+const emailInput = document.querySelector("#email")
+const telephoneInput = document.querySelector("#telephone")
+const addressInput = document.querySelector("#address-input")
+const zipCodeInput = document.querySelector("#zip")
+
+function prePopulateFields(){
+
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
+
+  let currentUser = userArray[indexOfUserLoggedIn]
+
+  if (currentUser.name != "guest"){
+    let nameArray = currentUser.name.split(" ")
+    firstNameInput.value = nameArray[0]
+    lastNameInput.value = nameArray[1]
+    emailInput.value = currentUser.email
+    telephoneInput.value = currentUser.phone
+    addressInput.value = currentUser.address
+    zipCodeInput.value = currentUser.zipCode
+  }
+}
+
+prePopulateFields()
+
+
+function fillReceipt(){
+
+  let totalPrice=0;
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
+
+  let userCart = userArray[indexOfUserLoggedIn].cart
+
+  userCart.forEach(item => {
+    let itemPrice = document.createElement("div");
+    itemPrice.setAttribute('class', 'price-item');
+    itemPrice.innerHTML=`
+    <p>${item.quantity}x ${item.name}</p>
+    <p>${(item.price)*(item.quantity)},00</p>
+    `
+    receipt.append(itemPrice)
+    totalPrice+=parseInt((item.price)*(item.quantity));
+  })
+
+  //ADD TOTAL SUM PART
+  receiptSum.innerHTML = `
+  <p>TOTAL</p>
+  <p>${totalPrice},00 SEK</p>
+  `
+}
+
+function clearCart(){
+
+  let indexOfUserLoggedIn = userArray.findIndex((object) => {
+    return object.loggedin == true;
+  });
+
+  let userCart = userArray[indexOfUserLoggedIn].cart
+
+  userCart.length = 0
+
+  localStorage.setItem("users", JSON.stringify(userArray));
+
+  displayLoggedInUser();
+  drawShoppingCart()
+}
