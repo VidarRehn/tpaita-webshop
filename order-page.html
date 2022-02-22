@@ -41,7 +41,7 @@
                     style=
                     "height:65px;
                     width:110px;
-                    ">
+                    " alt="t-paita-logo">
                 </a>           
             </div>
             <div class="header-icons">
@@ -54,23 +54,28 @@
                     <div class="item-counter hide"></div>
                 </i>
                 <div class="shopping-cart-popup hide">
-                    <h2>Shopping cart</h2>
-                    <div class="shopping-cart-contents">
-        
+                    <div class="cart-is-empty"></div>
+                    <div class="cart-not-empty">
+                      <h2>Shopping cart</h2>
+                      <div class="shopping-cart-contents"></div>
+                      <div class="promo">
+                        <input
+                          type="text"
+                          name="promo-code"
+                          id="promo-code"
+                          placeholder="add promo code"
+                        />
+                        <button>apply</button>
+                      </div>
+                      <div class="shopping-cart-details">
+                        <h2>review</h2>
+                      </div>
+                      <div class="sum"></div>
+                      <a href="order-page.html"
+                        ><button class="button">enter address details</button></a
+                      >
                     </div>
-                    <div class="promo">
-                      <input
-                        type="text" name="promo-code"   id="promo-code"   placeholder="add promo code"
-                      />
-                      <button>apply</button>
-                    </div>
-                    <div class="shopping-cart-details">
-                      <h2>review</h2>
-                    </div>
-                    <div class="sum"></div>
-                    <a href="order-page.html"><button class="button">enter address details</button></a>
                   </div>
-            </div>
         </header>
 
         <div class="login-page hide">
@@ -82,9 +87,8 @@
 
                 <img  src="images/logo.PNG" 
                 style=
-                "height:65px;
-                width:110px;
-                ">
+                "height:100px;
+                " alt="t-paita-logo">
 
             </div>
 
@@ -107,7 +111,7 @@
                 style=
                 "height:65px;
                 width:110px;
-                ">
+                " alt="t-paita-logo">
 
 
             </div>
@@ -131,9 +135,23 @@
     
         <main>
             <div class="order-container">
-                <h1 class="headline-order">Order</h1>
+                
 
-                <form class="order-form">
+
+          <h1 class="headline-order">Order</h1>
+
+          <div class="popup">
+            <div class="popup-container">
+                <h2 class="popup-title">reciept</h2>
+                <p class="product-reciept">här ska produkterna vara</p>
+                <button type="button" class="close-button">close</button>
+            </div>
+          </div>
+
+          <form class="order-form">
+
+                
+
 
                     
                     <div class="small-input-container">
