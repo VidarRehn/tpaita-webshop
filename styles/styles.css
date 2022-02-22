@@ -547,6 +547,13 @@ main .breadcrumbs li a:hover {
   background: #F4F4F4;
 }
 
+@media (min-width: 900px) {
+  .product-list article {
+    -ms-flex-preferred-size: 21%;
+        flex-basis: 21%;
+  }
+}
+
 .product-list article img {
   width: 100%;
   cursor: pointer;
@@ -1066,5 +1073,11 @@ button:active {
 
 .wrapper button {
   cursor: pointer;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=styles.css.map */
