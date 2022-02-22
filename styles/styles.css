@@ -859,6 +859,7 @@ button:active {
 .promo button {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  background-image: linear-gradient(60deg, #49C000, #3a9202);
 }
 
 .login-page {
