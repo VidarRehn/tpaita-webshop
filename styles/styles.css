@@ -378,6 +378,45 @@ form {
   outline: none;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-title {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.popup-container {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  padding: 15px;
+}
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-opened {
+  visibility: visible;
+  opacity: 1;
+}
+
 main {
   width: 100%;
   margin-top: 80px;
@@ -733,7 +772,7 @@ button:active {
 }
 
 .fa-trash {
-  color: #F700FC;
+  color: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .promo {
