@@ -257,8 +257,6 @@ function drawShoppingCart() {
   });
 
 const userCart = userArray[userIndex].cart;
-console.log(userCart);
-console.log(shoppingCart)
 
 
 //IF EMPTY = TOGGLE DISPLAY SHOPPING CART
@@ -298,7 +296,6 @@ itemPrice.innerHTML=`
 priceDetails.append(itemPrice)
 totalPrice+=parseInt(item.price);
 });}
-console.log(shoppingCartContent)
 
 //ADD TOTAL SUM PART
 sum.innerHTML = `
@@ -316,7 +313,6 @@ function deleteItem(x) {
     if (user.loggedin) {userIndex=userindex}
   });
   let deletedItem = userArray[userIndex].cart.splice(x.parentElement.parentElement.id, 1);
-  console.log(deletedItem)
   localStorage.setItem("users", JSON.stringify(userArray));
   displayLoggedInUser() 
   drawShoppingCart()
@@ -344,7 +340,6 @@ function logOut(){
 
       userLoggedIn.loggedin = false
       guestUser.loggedin = true
-      console.log(guestUser)
       userIcon.classList.remove("hide")
       logOutIcon.classList.add("hide")
 
