@@ -11,7 +11,6 @@ const closeButton = popup.querySelector('.close-button');
 
 form.addEventListener('submit', (e) => { 
   e.preventDefault();
-  console.log("byter sida")
   const popupToggle = () => {
     popup.classList.toggle('popup-opened');
     

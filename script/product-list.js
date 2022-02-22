@@ -55,19 +55,40 @@ function addProductToCart(x) {
   let productImage = parent.children[0].src;
   let productName = parent.children[2].children[0].innerText;
 
-  let userObj = {
-    image: productImage,
-    name: productName,
-    price: productPrice,
-  };
-
   let indexOfUserLoggedIn = userArray.findIndex((object) => {
     return object.loggedin == true;
   });
 
   let userCart = userArray[indexOfUserLoggedIn].cart;
 
-  userCart.push(userObj);
+  let counter = 0;
+
+  function doesItemExist(){
+    userCart.forEach(item => {
+      if (item.name == productName){
+        counter++;
+      }
+    })
+    if (counter > 0){
+      userCart.forEach(item => {
+        if (item.name == productName){
+          item.quantity++
+        }
+      })
+    } else {
+      
+      let userObj = {
+        image: productImage,
+        name: productName,
+        price: productPrice,
+        quantity: 1
+      };
+
+      userCart.push(userObj);
+    }
+  }
+
+  doesItemExist()
 
   localStorage.setItem("users", JSON.stringify(userArray));
 
