@@ -58,11 +58,10 @@
       margin: 7px
     }
     .login-btn{
-        background-color: $pink;
         color:$white;
     }
     .create-account-btn{
-        background-color: $green;
+        background-image: $green;
         color:$white;
     }
     input{
@@ -171,7 +170,6 @@
           padding: 10px;
           cursor: pointer;
           border:none;
-          background-color: $pink;
           color: $white;
       }
   }

@@ -26,16 +26,18 @@ text-align:center;
   }
 
 .input1 {
-  width:46%;
- margin:5px;
- margin-bottom: 15px;
-  
+  flex-basis: 100%;
+  margin-bottom: 15px;
 }
 
 .small-input-container{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
+  #lastname {
+    margin-left: 15px;
+  }
 }
 
 .input2 {
@@ -52,7 +54,9 @@ text-align:center;
    justify-content: center;
  }
 
-
+.headline-order {
+  margin:15px;
+}
  
  .order-form input:invalid {
   border: 2px solid red;

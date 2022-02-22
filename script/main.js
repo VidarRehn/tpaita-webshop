@@ -106,40 +106,47 @@ myFormAccount.addEventListener("submit", (e) => {
   let confirmPassword = document.querySelector("#confirm-password");
   let phone = document.querySelector("#phone-number");
 
-  let userObj = {
-    name: `${firstName.value} ${lastName.value}`,
-    loggedin: true,
-    address: address.value,
-    zipCode: zipCode.value,
-    email: email.value,
-    password: password.value,
-    phone: phone.value,
-    cart: [],
-  };
+  if (password.value == confirmPassword.value){
+    let userObj = {
+      name: `${firstName.value} ${lastName.value}`,
+      loggedin: true,
+      address: address.value,
+      zipCode: zipCode.value,
+      email: email.value,
+      password: password.value,
+      phone: phone.value,
+      cart: [],
+    };
+  
+    //kod som ändrar guest till false
+  
+    let indexOfUserLoggedIn = userArray.findIndex((object) => {
+      return object.loggedin == true;
+    });
+  
+    userArray[indexOfUserLoggedIn].loggedin = false;
+  
+    userArray.push(userObj);
+    localStorage.setItem("users", JSON.stringify(userArray));
+  
+    displayLoggedInUser();
+  
+    firstName.value = "";
+    lastName.value = "";
+    address.value = "";
+    zipCode.value = "";
+    email.value = "";
+    password.value = "";
+    confirmPassword.value = "";
+    phone.value = "";
+  
+    createAccountPage.classList.toggle("hide");
 
-  //kod som ändrar guest till false
+  } else {
+    alert("password does not match")
+  }
 
-  let indexOfUserLoggedIn = userArray.findIndex((object) => {
-    return object.loggedin == true;
-  });
 
-  userArray[indexOfUserLoggedIn].loggedin = false;
-
-  userArray.push(userObj);
-  localStorage.setItem("users", JSON.stringify(userArray));
-
-  displayLoggedInUser();
-
-  firstName.value = "";
-  lastName.value = "";
-  address.value = "";
-  zipCode.value = "";
-  email.value = "";
-  password.value = "";
-  confirmPassword.value = "";
-  phone.value = "";
-
-  createAccountPage.classList.toggle("hide");
 });
 
 // querystrings
@@ -297,26 +304,32 @@ displayLoggedInUser()
 
 function logOut(){
 
-    let indexOfUserLoggedIn = userArray.findIndex(object => {
+    let areYouSure = confirm("Are you sure you want to log out");
+
+    if (areYouSure == true){
+
+      let indexOfUserLoggedIn = userArray.findIndex(object => {
         return object.loggedin == true
-    })
+      })
 
-    let indexofGuest = userArray.findIndex(object => {
-        return object.name == "guest"
-    })
+      let indexofGuest = userArray.findIndex(object => {
+          return object.name == "guest"
+      })
 
-    let userLoggedIn = userArray[indexOfUserLoggedIn]
-    let guestUser = userArray[indexofGuest]
+      let userLoggedIn = userArray[indexOfUserLoggedIn]
+      let guestUser = userArray[indexofGuest]
 
-    userLoggedIn.loggedin = false
-    guestUser.loggedin = true
-    console.log(guestUser)
-    userIcon.classList.remove("hide")
-    logOutIcon.classList.add("hide")
+      userLoggedIn.loggedin = false
+      guestUser.loggedin = true
+      console.log(guestUser)
+      userIcon.classList.remove("hide")
+      logOutIcon.classList.add("hide")
 
-    localStorage.setItem("users", JSON.stringify(userArray))
+      localStorage.setItem("users", JSON.stringify(userArray))
 
-    displayLoggedInUser()
+      displayLoggedInUser()
+
+    }
 }
 
 logOutIcon.addEventListener("click", logOut)

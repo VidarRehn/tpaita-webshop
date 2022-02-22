@@ -310,7 +310,7 @@ input {
 }
 
 .pay-button {
-  background-color: #F700FC;
+  background-color: linear-gradient(60deg, #fd42b5, #d40059);
   color: #FFF;
   width: 80%;
   height: 48px;
@@ -324,8 +324,8 @@ h1 {
 }
 
 .input1 {
-  width: 46%;
-  margin: 5px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin-bottom: 15px;
 }
 
@@ -334,9 +334,13 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.small-input-container #lastname {
+  margin-left: 15px;
 }
 
 .input2 {
@@ -355,6 +359,10 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.headline-order {
+  margin: 15px;
 }
 
 .order-form input:invalid {
@@ -770,7 +778,7 @@ button:active {
 .login-page .logo {
   height: 60px;
   width: 100px;
-  background-color: #F700FC;
+  background-color: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .login-page .my-form-login {
@@ -797,12 +805,11 @@ button:active {
 }
 
 .login-page .my-form-login .login-btn {
-  background-color: #F700FC;
   color: #FFF;
 }
 
 .login-page .my-form-login .create-account-btn {
-  background-color: #49C000;
+  background-image: linear-gradient(60deg, #49C000, #3a9202);
   color: #FFF;
 }
 
@@ -895,7 +902,7 @@ button:active {
 .create-account-page .logo {
   height: 60px;
   width: 100px;
-  background-color: #F700FC;
+  background-color: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .create-account-page .my-form-account {
@@ -962,7 +969,6 @@ button:active {
   padding: 10px;
   cursor: pointer;
   border: none;
-  background-color: #F700FC;
   color: #FFF;
 }
 
