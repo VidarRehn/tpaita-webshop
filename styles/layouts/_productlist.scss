@@ -59,9 +59,14 @@
       background: #F4F4F4;
       padding:5px;
     }
-p{
-  font-size: 12px;
-}
+
+    p{
+      font-size: 12px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
   }
 }
@@ -101,10 +106,22 @@ p{
 button {
   color: $white;
   border: none;
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 5px 10px;
   border-radius: 5px;
   font-weight: 500;
 
   @include pinkbutton
+}
+
+.description {
+  padding: 10px;
+
+  > * {
+    margin-bottom: 10px;
+  }
+
+  .product-name {
+    font-weight: 500;
+  }
 }

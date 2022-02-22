@@ -275,6 +275,7 @@
           box-shadow: 0 -4px 10px 0 #a1a1a1;
   background-color: #FFF;
   padding-bottom: 10px;
+  margin-top: 20px;
 }
 
 .footer .social-media-links-2 i {
@@ -562,6 +563,11 @@ main .breadcrumbs li a:hover {
   font-size: 12px;
 }
 
+.product-list article:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .product-pop-up {
   width: 100vw;
   height: calc(100vh - 79px);
@@ -611,8 +617,8 @@ main .breadcrumbs li a:hover {
 button {
   color: #FFF;
   border: none;
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 5px 10px;
   border-radius: 5px;
   font-weight: 500;
   background-image: linear-gradient(60deg, #fd42b5, #d40059);
@@ -628,6 +634,18 @@ button:hover {
 button:active {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
+}
+
+.description {
+  padding: 10px;
+}
+
+.description > * {
+  margin-bottom: 10px;
+}
+
+.description .product-name {
+  font-weight: 500;
 }
 
 .shopping-cart-popup {
@@ -733,7 +751,7 @@ button:active {
 }
 
 .fa-trash {
-  color: #F700FC;
+  color: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .promo {
