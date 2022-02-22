@@ -38,13 +38,15 @@
       border: solid 1px black;
     border-radius:20px ;
     overflow: hidden;
+    background: $gray;
       div{
         flex-basis: 100%;
         text-align: center;
-        
+      }
+      div:nth-child(2){
+          background: white;
       }
       div:first-of-type, div:last-of-type{
-          background: $gray;
           &:hover{
               cursor:pointer;
           }
