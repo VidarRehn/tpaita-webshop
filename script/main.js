@@ -70,8 +70,7 @@ myFormLogin.addEventListener("submit", (e) => {
   userArray.forEach((userobj) => {
     if (userobj.email == email.value) {
       if (userobj.password == password.value) {
-        console.log("hej");
-
+        
         let indexOfUserLoggedIn = userArray.findIndex((object) => {
           return object.loggedin == true;
         });
@@ -80,16 +79,25 @@ myFormLogin.addEventListener("submit", (e) => {
         userobj.loggedin = true;
 
         localStorage.setItem("users", JSON.stringify(userArray));
+
+        displayLoggedInUser();
+        loginPage.classList.toggle("hide");
+
+        email.value = "";
+        password.value = "";
       }
     }
   });
 
-  displayLoggedInUser();
+  if(email.value !== ""){
+    alert("not a user")
+    email.value = "";
+    password.value = "";
+  } else {
+    email.value = "";
+    password.value = "";
+  }
 
-  email.value = "";
-  password.value = "";
-
-  loginPage.classList.toggle("hide");
 });
 
 myFormAccount.addEventListener("submit", (e) => {
