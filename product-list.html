@@ -22,46 +22,66 @@
   </head>
   <body>
     <div class="wrapper">
-        <header class="header">
-          <nav class="navbar">
+      <header class="header">
+        <nav class="navbar">
             <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-            <div class="navlinks">
-              <div class="links">
-                <!-- querystrings -->
-              </div>
-              <div class="social-media-links">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-facebook-square"></i></a>
-                <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
-                <a href="#"><i class="fa fa-envelope"></i></a>
-              </div>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </nav>
-          <div class="logo">
-            <a href="index.html">
-              <img  src="images/logo.PNG" 
-              style=
-              "height:65px;
-              width:110px;
-              ">
-          </a>   
+            
+            <div class="navlinks">
+                <div class="links">
+                <!-- querystrings -->
+                </div>  
+                <div class="social-media-links">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa fa-brands fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </nav>
 
-          <div class="header-icons">
+        <div class="logo">
+          <a href="index.html">
+            <img  src="images/logo.PNG" 
+            style=
+            "height:65px;
+            width:110px;
+            ">
+        </a>
+        </div>
+
+
+        <div class="header-icons">
             <div class="user">
-               <i class="fa fa-sign-out hide"></i>
+                <i class="fa fa-sign-out hide"></i>
                 <i class="fa fa-user"></i>
                 <p class="user-logged-in"></p>
             </div>
             <i class="fa fa-shopping-cart">
-              <div class="item-counter hide"></div>
+                <div class="item-counter hide"></div>
             </i>
-            <div class="shopping-cart-popup hide"></div>
-          </div>
-        </header>
+            <div class="shopping-cart-popup hide">
+              <h2>Shopping cart</h2>
+              <div class="shopping-cart-contents">
+  
+              </div>
+              <div class="promo">
+                <input
+                  type="text" name="promo-code"   id="promo-code"   placeholder="add promo code"
+                />
+                <button>apply</button>
+              </div>
+              <div class="shopping-cart-details">
+                <h2>review</h2>
+              </div>
+              <div class="sum"></div>
+              <a href="order-page.html"><button class="button">enter address details</button></a>
+            </div>
+        </div>
+      </header>
         <div class="login-page hide">
           <div class="exit-box-login">
             <span></span>
@@ -77,8 +97,8 @@
           </div>
 
           <form class="my-form-login" action="">
-              <input type="email" name="email" id="login-email" placeholder="email-address">
-              <input type="password" name="password" id="login-password" placeholder="password">
+              <input type="email" name="email" id="login-email" placeholder="email-address" required>
+              <input type="password" name="password" id="login-password" placeholder="password" required>
               <button class="login-btn">log in</button>
               <p class="login-paragraph">forgot password</p>
               <button type="button" class="create-account-btn">create an account</button>
@@ -101,21 +121,21 @@
           <form class="my-form-account" action="">
   
               <div class="first-last-name">
-                  <input type="text" name="first-name" id="first-name-account" placeholder="First Name">
-                  <input type="text" name="last-name" id="last-name-account" placeholder="Last Name">
+                  <input type="text" name="first-name" id="first-name-account" placeholder="First Name" required>
+                  <input type="text" name="last-name" id="last-name-account" placeholder="Last Name" required>
               </div>
   
-              <input type="text" name="address" id="address" placeholder="address">
+              <input type="text" name="address" id="address" placeholder="address" required>
   
-              <input type="text" name="zip-code" id="zip-code" placeholder="zip-code">
+              <input type="text" name="zip-code" id="zip-code" placeholder="zip-code" required>
   
-              <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres">
+              <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres" required>
   
-              <input type="password" name="password-account" id="password-account" placeholder="password">
+              <input type="password" name="password-account" id="password-account" placeholder="password" required>
   
-              <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password">
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password" required>
   
-              <input type="tel" name="phone-number" id="phone-number" placeholder="phone number">
+              <input type="tel" name="phone-number" id="phone-number" placeholder="phone number" required>
               <p>by clicking sign up you agree to our terms and conditions</p>
               <button class="sign-up-btn">sign up</button>
           </form>
@@ -139,7 +159,7 @@
       </main>
 
       <aside class="product-pop-up hide" id="product-pop-up">
-        <button onclick="showProduct(this)"> <Back</button>
+        <button onclick="showProduct(this)">  Back </button>
         <h1 class="product-name-title"></h1>
         <div class="article-container"></div>
       </aside>
@@ -155,7 +175,7 @@
         <div class="footer-text">
           <p>Privacy | Terms & Conditions | Feedback</p>
 
-          <p>copyright. blablabla</p>
+          <p class="copywrite"><span class="copyright">&copy</span> tpaita</p> 
         </div>
       </footer>
     </div>

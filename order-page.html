@@ -73,8 +73,8 @@
             </div>
 
             <form class="my-form-login" action="">
-                <input type="email" name="email" id="login-email" placeholder="email-address">
-                <input type="password" name="password" id="login-password" placeholder="password">
+                <input type="email" name="email" id="login-email" placeholder="email-address" required>
+                <input type="password" name="password" id="login-password" placeholder="password" required>
                 <button class="login-btn">log in</button>
                 <p class="login-paragraph">forgot password</p>
                 <button type="button" class="create-account-btn">create an account</button>
@@ -98,21 +98,21 @@
             <form class="my-form-account" action="">
 
                 <div class="first-last-name">
-                    <input type="text" name="first-name" id="first-name-account" placeholder="First Name">
-                    <input type="text" name="last-name" id="last-name-account" placeholder="Last Name">
+                    <input type="text" name="first-name" id="first-name-account" placeholder="First Name" required>
+                    <input type="text" name="last-name" id="last-name-account" placeholder="Last Name" required>
                 </div>
 
-                <input type="text" name="address" id="address" placeholder="address">
+                <input type="text" name="address" id="address" placeholder="address" required>
 
-                <input type="text" name="zip-code" id="zip-code" placeholder="zip-code">
+                <input type="text" name="zip-code" id="zip-code" placeholder="zip-code" required>
 
-                <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres">
+                <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail address" required>
 
-                <input type="password" name="password-account" id="password-account" placeholder="password">
+                <input type="password" name="password-account" id="password-account" placeholder="password" required>
 
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password">
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password" required>
 
-                <input type="tel" name="phone-number" id="phone-number" placeholder="phone number">
+                <input type="tel" name="phone-number" id="phone-number" placeholder="phone number" required>
                 <p>by clicking sign up you agree to our terms and conditions</p>
                 <button class="sign-up-btn">sign up</button>
             </form>
@@ -120,38 +120,19 @@
     
         <main>
 
-          <h1>Order</h1>
+          <h1 class="headline-order">Order</h1>
 
           <form class="order-form">
 
             
             <div class="small-input-container">
-
                 <input type="text"  placeholder="firstname" class="input1" id="firstname" required>
-                
-                
-                
                 <input type="text"  placeholder="lastname"  class="input1" id="lastname" required>
             </div>
-            
-
-            
-            <input type="email"  placeholder="e-mail adress"    class="input2" id="email" required> 
-           
-
-           
-            <input type="text"  placeholder="telephone number"   class="input2" id ="telephone" required> 
-            
-
-           
-            <input type="password"  placeholder="password"   class="input2" id="password" required> 
-            
-
-            
-            <input type="text"  placeholder="confirm password"   class="input2" required> 
-            
-
-            
+            <input type="text" placeholder="address" class="input2" id="address-input" required>
+            <input type="text" placeholder="zip code" class="input2" id="zip" required>
+            <input type="email"  placeholder="e-mail adress" class="input2" id="email" required> 
+            <input type="text"  placeholder="telephone number" class="input2" id ="telephone" required> 
         
             <br>
             <div class="button-container">

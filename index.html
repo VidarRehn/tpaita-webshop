@@ -38,14 +38,13 @@
             </nav>
 
             <div class="logo">
-
+              <a href="index.html">
                 <img  src="images/logo.PNG" 
                 style=
                 "height:65px;
                 width:110px;
                 ">
-
-
+            </a>
             </div>
 
 
@@ -58,7 +57,23 @@
                 <i class="fa fa-shopping-cart">
                     <div class="item-counter hide"></div>
                 </i>
-                <div class="shopping-cart-popup hide"></div>
+                <div class="shopping-cart-popup hide">
+                  <h2>Shopping cart</h2>
+                  <div class="shopping-cart-contents">
+      
+                  </div>
+                  <div class="promo">
+                    <input
+                      type="text" name="promo-code"   id="promo-code"   placeholder="add promo code"
+                    />
+                    <button>apply</button>
+                  </div>
+                  <div class="shopping-cart-details">
+                    <h2>review</h2>
+                  </div>
+                  <div class="sum"></div>
+                  <a href="order-page.html"><button class="button">enter address details</button></a>
+                </div>
             </div>
         </header>
         <div class="login-page hide">
@@ -78,8 +93,8 @@
             </div>
 
             <form class="my-form-login" action="">
-                <input type="email" name="email" id="login-email" placeholder="email-address">
-                <input type="password" name="password" id="login-password" placeholder="password">
+                <input type="email" name="email" id="login-email"  placeholder="email-address" required>
+                <input type="password" name="password" id="login-password" placeholder="password" required>
                 <button class="login-btn">log in</button>
                 <p class="login-paragraph">forgot password</p>
                 <button type="button" class="create-account-btn">create an account</button>
@@ -91,33 +106,31 @@
                 <span></span>
             </div>
             <div class="logo">
-              <a href="index.html">
                 <img  src="images/logo.PNG" 
                 style=
                 "height:65px;
                 width:110px;
-                ">
-              </a>   
+                ">  
             </div>
 
             <form class="my-form-account" action="">
 
                 <div class="first-last-name">
-                    <input type="text" name="first-name" id="first-name-account" placeholder="First Name">
-                    <input type="text" name="last-name" id="last-name-account" placeholder="Last Name">
+                    <input type="text" name="first-name" id="first-name-account" placeholder="First Name" required>
+                    <input type="text" name="last-name" id="last-name-account" placeholder="Last Name" required>
                 </div>
 
-                <input type="text" name="address" id="address" placeholder="address">
+                <input type="text" name="address" id="address" placeholder="address" required>
 
-                <input type="text" name="zip-code" id="zip-code" placeholder="zip-code">
+                <input type="text" name="zip-code" id="zip-code" placeholder="zip-code" required>
 
-                <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail addres">
+                <input type="email" name="e-mail-account" id="e-mail-account" placeholder="e-mail address" required>
 
-                <input type="password" name="password-account" id="password-account" placeholder="password">
+                <input type="password" name="password-account" id="password-account" placeholder="password" required>
 
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password">
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password" required>
 
-                <input type="tel" name="phone-number" id="phone-number" placeholder="phone number">
+                <input type="tel" name="phone-number" id="phone-number" placeholder="phone number" required>
                 <p>by clicking sign up you agree to our terms and conditions</p>
                 <button class="sign-up-btn">sign up</button>
             </form>

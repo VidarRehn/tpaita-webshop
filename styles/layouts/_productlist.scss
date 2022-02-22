@@ -68,15 +68,13 @@ p{
 
 .product-pop-up {
   width: 100vw;
-  height: 100%;
+  height:  calc(100vh - 79px);
   top: 80px;
   left: 0;
   padding: 40px;
   background: $white;
-  position: absolute;
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
+  position: fixed;
+  overflow: auto;
   img {
     width: 100%;
   }
@@ -93,7 +91,7 @@ p{
     border-radius: 5px;
     font-weight: 500;
 
-    @include pinkbutton
+    @include pinkbutton()
   }
 }
 .article-container {
