@@ -233,21 +233,36 @@ function displayLoggedInUser() {
 let shoppingCartContent = document.querySelector(".shopping-cart-contents");
 let priceDetails = document.querySelector(".shopping-cart-details");
 let sum = document.querySelector(".sum");
-
-
-
+const cartIsNotEmpty = document.querySelector(".cart-not-empty");
+const cartIsEmpty = document.querySelector(".cart-is-empty");
 
 function drawShoppingCart() {
+  cartIsEmpty.innerHTML= "";
   shoppingCartContent.innerHTML = "";
   priceDetails.innerHTML="";
   let userIndex =0;
   let totalPrice=0;
+
+  //LOOK FOR CORRECT USER CART
   userArray.forEach((user, userindex) => {
     if (user.loggedin) {userIndex=userindex}
   });
 
 const userCart = userArray[userIndex].cart;
 console.log(userCart);
+console.log(shoppingCart)
+
+
+//IF EMPTY = TOGGLE DISPLAY SHOPPING CART
+if(userCart.length===0){
+  cartIsNotEmpty.classList.toggle("hide");
+  cartIsEmpty.innerHTML = `
+  <h1>YOUR CART IS EMPTY MAN</h1>
+  <img src="./images/empty-shopping-cart.jpg" alt="empty shopping cart">
+  `;
+}else{
+//IF NOT EMPTY :
+// DRAW SHOPPINGCART
 userCart.forEach((item,index) => {
 let section = document.createElement("section");
 section.setAttribute('id', index);
@@ -274,7 +289,7 @@ itemPrice.innerHTML=`
 `
 priceDetails.append(itemPrice)
 totalPrice+=parseInt(item.price);
-});
+});}
 console.log(shoppingCartContent)
 
 //ADD TOTAL SUM PART
