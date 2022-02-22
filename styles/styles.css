@@ -389,10 +389,11 @@ main .breadcrumbs {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 30px;
+  margin-top: 10px;
 }
 
 main .breadcrumbs li + li:before {
-  content: "/";
+  content: "/ ";
 }
 
 main .breadcrumbs li a {
@@ -733,7 +734,7 @@ button:active {
 }
 
 .fa-trash {
-  color: #F700FC;
+  color: linear-gradient(60deg, #fd42b5, #d40059);
 }
 
 .promo {
