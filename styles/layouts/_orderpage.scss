@@ -89,7 +89,7 @@ text-align:center;
   right: 0;
   z-index: 1;
   display: flex;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: white
 } 
 .popup-title {
   font-size: 36px;
@@ -97,13 +97,14 @@ text-align:center;
 }
 
 .popup-container {
-  background-color: #fff;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   text-align: center;
   margin: auto;
+  margin-top: 150px;
   position: relative;
   padding: 15px;
+  height: 100vh;
+
 }
 
 .popup {
