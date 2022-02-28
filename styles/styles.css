@@ -132,12 +132,17 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 600px) {
+  .header .navbar .navlinks {
+    width: 400px;
+    height: 100vh;
+  }
 }
 
 .header .navbar .navlinks .links {
@@ -149,7 +154,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 30px;
-  opacity: 0;
 }
 
 .header .navbar .navlinks .links a {
@@ -163,7 +167,6 @@
   display: -ms-flexbox;
   display: flex;
   margin: 30px;
-  opacity: 0;
 }
 
 .header .navbar .navlinks .social-media-links i {
@@ -172,20 +175,8 @@
 }
 
 .header .navbar .active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.header .navbar .active .links {
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.header .navbar .active .social-media-links {
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .header .header-icons {
