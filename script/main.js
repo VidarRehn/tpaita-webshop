@@ -545,3 +545,12 @@ function clearCart(){
   displayLoggedInUser();
   drawShoppingCart()
 }
+
+// print receipt
+
+const printButton = document.querySelector("#print-btn")
+console.log(printButton)
+
+printButton.addEventListener("click", ()=>{
+  window.print()
+})
