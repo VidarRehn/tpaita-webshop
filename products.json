@@ -32,7 +32,7 @@
             "price": 1600,
             "image": "images/man6.jpg"
         },{
-            "name": "even whiter tee (m)",
+            "name": "smokey white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man7.jpg"
@@ -105,7 +105,7 @@
             "price": 1600,
             "image": "images/women8.jpg"
         },{
-            "name": "whiter tee (w)",
+            "name": "smokey white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women9.jpg"
@@ -115,7 +115,7 @@
             "price": 1600,
             "image": "images/women10.jpg"
         },{
-            "name": "even whiter tee (w)",
+            "name": "polarbear white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women11.jpg"
