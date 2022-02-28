@@ -780,7 +780,7 @@ button:active {
 
 @media (min-width: 850px) {
   .shopping-cart-popup {
-    width: 40%;
+    width: 480px;
     left: auto;
     right: 0px;
   }
