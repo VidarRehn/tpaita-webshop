@@ -430,6 +430,14 @@ form {
   opacity: 1;
 }
 
+.buyer-info {
+  text-align: left;
+}
+
+.buyer-info span {
+  font-style: italic;
+}
+
 main {
   width: 100%;
   margin-top: 80px;

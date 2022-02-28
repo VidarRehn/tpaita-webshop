@@ -428,6 +428,7 @@ const popup = document.querySelector('.popup');
 const closeButton = document.querySelector('.close-button');
 const receipt = document.querySelector(".product-receipt")
 const receiptSum = document.querySelector(".receipt-sum")
+const buyerInfo = document.querySelector(".buyer-info")
 
 form.addEventListener('submit', (e) => { 
   e.preventDefault();
@@ -440,7 +441,6 @@ form.addEventListener('submit', (e) => {
 })
 
 closeButton.addEventListener('click', (e) => { 
-  console.log("hej")
   window.location.href = "index.html"
   clearCart()
 })
@@ -451,6 +451,7 @@ const emailInput = document.querySelector("#email")
 const telephoneInput = document.querySelector("#telephone")
 const addressInput = document.querySelector("#address-input")
 const zipCodeInput = document.querySelector("#zip")
+const otherCommentsInput = document.querySelector("#other-comments")
 
 function prePopulateFields(){
 
@@ -481,7 +482,34 @@ function fillReceipt(){
     return object.loggedin == true;
   });
 
+  let buyer = userArray[indexOfUserLoggedIn]
   let userCart = userArray[indexOfUserLoggedIn].cart
+
+  let buyerInfoContainer = document.createElement("div")
+  if (buyer.name != "guest"){
+    buyerInfoContainer.innerHTML = `
+    <p>${buyer.name}</p>
+    <p>${buyer.address}, ${buyer.zipCode}</p>
+    <p>${buyer.email}</p>
+    <br>
+    <span>${otherCommentsInput.value}</span>
+    <br>
+    <br>
+    `
+  } else {
+    buyerInfoContainer.innerHTML = `
+    <p>${firstNameInput.value} ${lastNameInput.value}</p>
+    <p>${addressInput.value}, ${zipCodeInput.value}</p>
+    <p>${emailInput.value}</p>
+    <br>
+    <span>${otherCommentsInput.value}</span>
+    <br>
+    <br>
+    `
+  }
+
+
+  buyerInfo.append(buyerInfoContainer)
 
   userCart.forEach(item => {
     let itemPrice = document.createElement("div");
@@ -498,6 +526,7 @@ function fillReceipt(){
   receiptSum.innerHTML = `
   <p>TOTAL</p>
   <p>${totalPrice},00 SEK</p>
+  <br>
   `
 }
 
