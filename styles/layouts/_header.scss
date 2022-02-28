@@ -91,14 +91,17 @@
           font-size: 24px;
           background-color: $white;
           height: min-content;
-          transform: scale(1,0);
-          transform-origin: top;
-          transition: 0.8s;
+          transform: translateX(-100%);
+          transition: 0.5s;
+          @media(min-width: 600px){
+            width: 400px;
+            height: 100vh;
+          }
+
           .links {
             display: flex;
             flex-direction: column;
             margin: 30px;
-            opacity: 0;
 
             a {
               text-decoration: none;
@@ -110,7 +113,6 @@
           .social-media-links {
               display: flex;
               margin: 30px;
-              opacity: 0;
               i {
                   margin-right: 10px;
                   color: $gray;
@@ -118,15 +120,7 @@
           }
       }
       .active{
-        transform: scale(1);
-        .links{
-          opacity: 1;
-          transition-delay: 0.2s;
-        }
-        .social-media-links{
-          opacity: 1;
-          transition-delay: 0.2s;
-        }
+        transform: translateX(0);
       }
   }
 
