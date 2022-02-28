@@ -164,6 +164,7 @@
 
 .header .navbar .navlinks .links a:hover {
   background-image: -webkit-linear-gradient(#fd42b5, #d40059);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -182,6 +183,7 @@
 
 .header .navbar .navlinks .social-media-links i:hover {
   background-image: -webkit-linear-gradient(#fd42b5, #d40059);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -229,6 +231,14 @@
 .header .header-icons .fa {
   padding: 10px;
   color: #989898;
+}
+
+.header .header-icons .fa:hover:before {
+  background: -webkit-linear-gradient(#fd42b5, #d40059);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
 }
 
 .header .header-icons .fa-shopping-cart {
@@ -287,6 +297,7 @@
 
 .footer .social-media-links-2 i:hover {
   background-image: -webkit-linear-gradient(#fd42b5, #d40059);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
