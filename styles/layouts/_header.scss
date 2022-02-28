@@ -107,7 +107,12 @@
               text-decoration: none;
               margin-top: 20px;
               color: $gray;
-          }
+              &:hover{
+                background-image: -webkit-linear-gradient(rgb(253, 66, 181), rgb(212, 0, 89));
+                 -webkit-background-clip: text;
+                 -webkit-text-fill-color: transparent;
+              }
+            }
           }
 
           .social-media-links {
@@ -115,7 +120,12 @@
               margin: 30px;
               i {
                   margin-right: 10px;
-                  color: $gray;
+                  color: $gray;            
+                    &:hover{
+                      background-image: -webkit-linear-gradient(rgb(253, 66, 181), rgb(212, 0, 89));
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    }
               }
           }
       }
