@@ -778,6 +778,14 @@ button:active {
   text-align: left;
 }
 
+@media (min-width: 850px) {
+  .shopping-cart-popup {
+    width: 40%;
+    left: auto;
+    right: 0px;
+  }
+}
+
 .shopping-cart-popup .cart-is-empty {
   text-align: center;
   max-width: 800px;
