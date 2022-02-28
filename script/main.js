@@ -8,7 +8,7 @@ hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active")
     }else{
         navLinks.classList.toggle("active")
-        shoppingCart.classList.toggle("hide") 
+        shoppingCart.classList.add("hide") 
     }
     hamburger.firstElementChild.classList.toggle("is-active")
 })
@@ -20,9 +20,9 @@ const shoppingCart = document.querySelector(".shopping-cart-popup");
 
 shoppingCartIcon.addEventListener("click", () => {
     if(navLinks.classList.contains("active")){
-        navLinks.classList.toggle("active") 
+        navLinks.classList.remove("active") 
         shoppingCart.classList.toggle("hide")
-        hamburger.firstElementChild.classList.toggle("is-active")
+        hamburger.firstElementChild.classList.remove("is-active")
     }else{
         shoppingCart.classList.toggle("hide")
     }
@@ -38,7 +38,7 @@ loginUser.addEventListener("click", () => {
   loginPage.classList.toggle("hide");
 });
 exitBoxLogin.addEventListener("click", () => {
-  loginPage.classList.toggle("hide");
+  loginPage.classList.add("hide");
 });
 
 //toggle create account page
@@ -48,12 +48,12 @@ const createAccountPage = document.querySelector(".create-account-page");
 const exitBoxAccount = document.querySelector(".exit-box-account");
 
 createAccountBtn.addEventListener("click", () => {
-  loginPage.classList.toggle("hide");
-  createAccountPage.classList.toggle("hide");
+  loginPage.classList.add("hide");
+  createAccountPage.classList.remove("hide");
 });
 
 exitBoxAccount.addEventListener("click", () => {
-  createAccountPage.classList.toggle("hide");
+  createAccountPage.classList.add("hide");
 });
 
 // submit form events
@@ -97,7 +97,10 @@ myFormLogin.addEventListener("submit", (e) => {
     email.value = "";
     password.value = "";
   }
-
+  shoppingCart.classList.add("hide")
+  if(window.location.href.indexOf("order-page.html") != -1){
+    window.location.href = "index.html"
+  }
 });
 
 myFormAccount.addEventListener("submit", (e) => {
@@ -153,7 +156,10 @@ myFormAccount.addEventListener("submit", (e) => {
   } else {
     alert("password does not match")
   }
-
+  shoppingCart.classList.add("hide")
+  if(window.location.href.indexOf("order-page.html") != -1){
+    window.location.href = "index.html"
+  }
 
 });
 
@@ -349,11 +355,14 @@ function logOut(){
       guestUser.loggedin = true
       userIcon.classList.remove("hide")
       logOutIcon.classList.add("hide")
+      shoppingCart.classList.add("hide")
+      if(window.location.href.indexOf("order-page.html") != -1){
+        window.location.href = "index.html"
+      }
 
       localStorage.setItem("users", JSON.stringify(userArray))
 
       displayLoggedInUser()
-
     }
 }
 
@@ -419,6 +428,7 @@ const popup = document.querySelector('.popup');
 const closeButton = document.querySelector('.close-button');
 const receipt = document.querySelector(".product-receipt")
 const receiptSum = document.querySelector(".receipt-sum")
+const buyerInfo = document.querySelector(".buyer-info")
 
 form.addEventListener('submit', (e) => { 
   e.preventDefault();
@@ -431,7 +441,6 @@ form.addEventListener('submit', (e) => {
 })
 
 closeButton.addEventListener('click', (e) => { 
-  console.log("hej")
   window.location.href = "index.html"
   clearCart()
 })
@@ -442,6 +451,7 @@ const emailInput = document.querySelector("#email")
 const telephoneInput = document.querySelector("#telephone")
 const addressInput = document.querySelector("#address-input")
 const zipCodeInput = document.querySelector("#zip")
+const otherCommentsInput = document.querySelector("#other-comments")
 
 function prePopulateFields(){
 
@@ -472,7 +482,34 @@ function fillReceipt(){
     return object.loggedin == true;
   });
 
+  let buyer = userArray[indexOfUserLoggedIn]
   let userCart = userArray[indexOfUserLoggedIn].cart
+
+  let buyerInfoContainer = document.createElement("div")
+  if (buyer.name != "guest"){
+    buyerInfoContainer.innerHTML = `
+    <p>${buyer.name}</p>
+    <p>${buyer.address}, ${buyer.zipCode}</p>
+    <p>${buyer.email}</p>
+    <br>
+    <span>${otherCommentsInput.value}</span>
+    <br>
+    <br>
+    `
+  } else {
+    buyerInfoContainer.innerHTML = `
+    <p>${firstNameInput.value} ${lastNameInput.value}</p>
+    <p>${addressInput.value}, ${zipCodeInput.value}</p>
+    <p>${emailInput.value}</p>
+    <br>
+    <span>${otherCommentsInput.value}</span>
+    <br>
+    <br>
+    `
+  }
+
+
+  buyerInfo.append(buyerInfoContainer)
 
   userCart.forEach(item => {
     let itemPrice = document.createElement("div");
@@ -489,6 +526,7 @@ function fillReceipt(){
   receiptSum.innerHTML = `
   <p>TOTAL</p>
   <p>${totalPrice},00 SEK</p>
+  <br>
   `
 }
 

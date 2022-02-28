@@ -2,62 +2,62 @@
     "products": [{
         "category": "men",
         "items": [{
-            "name": "white tee",
+            "name": "white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1000,
             "image": "images/man1.jpg"
         },{
-            "name": "eggshell white tee",
+            "name": "eggshell white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1800,
             "image": "images/man2.webp"
         },{
-            "name": "whitest tee",
+            "name": "whitest tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1100,
             "image": "images/man3.webp"
         },{
-            "name": "even whiter tee",
+            "name": "even whiter tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1200,
             "image": "images/man4.webp"
         },{
-            "name": "off white tee",
+            "name": "off white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man5.jpg"
         },{
-            "name": "whiter than whitest tee",
+            "name": "whiter than whitest tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man6.jpg"
         },{
-            "name": "even whiter tee",
+            "name": "smokey white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man7.jpg"
         },{
-            "name": "whitest of them all tee",
+            "name": "whitest of them all tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man8.jpg"
         },{
-            "name": "creme white tee",
+            "name": "creme white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man9.jpg"
         },{
-            "name": "snow white tee",
+            "name": "snow white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man10.jpg"
         },{
-            "name": "the most white tee",
+            "name": "the most white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man11.jpg"
         },{
-            "name": "dirty white tee",
+            "name": "dirty white tee (m)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/man12.jpg"
@@ -65,62 +65,62 @@
     },{
         "category": "women",
         "items": [{
-            "name": "white tee",
+            "name": "white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1000,
             "image": "images/women1.jpg"
         },{
-            "name": "whiter tee",
+            "name": "whiter tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1800,
             "image": "images/women2.jpg"
         },{
-            "name": "whitest tee",
+            "name": "whitest tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1100,
             "image": "images/women3.jpg"
         },{
-            "name": "even whiter tee",
+            "name": "even whiter tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1200,
             "image": "images/women4.jpg"
         },{
-            "name": "creme white tee",
+            "name": "creme white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women5.jpg"
         },{
-            "name": "off white tee",
+            "name": "off white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women6.jpg"
         },{
-            "name": "snow white tee",
+            "name": "snow white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women7.jpg"
         },{
-            "name": "eggshell white tee",
+            "name": "eggshell white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women8.jpg"
         },{
-            "name": "whiter tee",
+            "name": "smokey white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women9.jpg"
         },{
-            "name": "the most white tee",
+            "name": "the most white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women10.jpg"
         },{
-            "name": "even whiter tee",
+            "name": "polarbear white tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women11.jpg"
         },{
-            "name": "whitest of them all tee",
+            "name": "whitest of them all tee (w)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/women12.jpg"
@@ -128,62 +128,62 @@
     },{
         "category": "kids",
         "items": [{
-            "name": "white tee",
+            "name": "white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1000,
             "image": "images/kid1.jpg"
         },{
-            "name": "whiter tee",
+            "name": "whiter tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1800,
             "image": "images/kid2.jpg"
         },{
-            "name": "whitest tee",
+            "name": "whitest tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1100,
             "image": "images/kid3.jpg"
         },{
-            "name": "even whiter tee",
+            "name": "even whiter tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1200,
             "image": "images/kid4.jpg"
         },{
-            "name": "the most white tee",
+            "name": "the most white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid5.jpg"
         },{
-            "name": "off white tee",
+            "name": "off white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid6.jpg"
         },{
-            "name": "whiter than white tee",
+            "name": "whiter than white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid7.jpg"
         },{
-            "name": "eggshell white tee",
+            "name": "eggshell white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid8.jpg"
         },{
-            "name": "whitest of them all tee",
+            "name": "whitest of them all tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid9.jpg"
         },{
-            "name": "dirty white tee",
+            "name": "dirty white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid10.jpg"
         },{
-            "name": "snow white tee",
+            "name": "snow white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid11.jpg"
         },{
-            "name": "creme white tee",
+            "name": "creme white tee (k)",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "price": 1600,
             "image": "images/kid12.jpg"
