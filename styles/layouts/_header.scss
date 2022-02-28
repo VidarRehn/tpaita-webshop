@@ -1,5 +1,10 @@
 
 .header {
+
+  @media print {
+    display: none;
+  }
+
   height: 80px;
   width: 100%;
   display: flex;

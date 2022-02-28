@@ -17,6 +17,12 @@
   background: #FFF;
 }
 
+@media print {
+  .header {
+    display: none;
+  }
+}
+
 .header > * {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -439,6 +445,12 @@ form {
   margin: 0 0 18px;
 }
 
+@media print {
+  .popup-title {
+    display: none;
+  }
+}
+
 .popup-container {
   border-radius: 15px;
   text-align: center;
@@ -465,6 +477,25 @@ form {
 
 .buyer-info span {
   font-style: italic;
+}
+
+@media print {
+  .close-button, #print-btn {
+    display: none;
+  }
+}
+
+.receipt-title {
+  font-size: 36px;
+  margin: 0 0 20px;
+  display: none;
+}
+
+@media print {
+  .receipt-title {
+    display: block;
+    text-align: left;
+  }
 }
 
 main {
