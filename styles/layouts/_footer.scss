@@ -13,6 +13,7 @@
         color: $gray;
         &:hover{
           background-image: -webkit-linear-gradient(rgb(253, 66, 181), rgb(212, 0, 89));
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
