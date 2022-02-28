@@ -93,6 +93,7 @@ function addProductToCart(x) {
   localStorage.setItem("users", JSON.stringify(userArray));
 
   displayLoggedInUser();
+  shoppingCart.classList.add("hide")
 }
 
 //TOGGLE PRODUCT DETAILS
