@@ -552,6 +552,8 @@ main .breadcrumbs li a:hover {
 }
 
 .main-landing-page .product-category img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 100%;
   width: 100%;
   display: block;
@@ -834,6 +836,11 @@ button:active {
           align-items: center;
 }
 
+.shopping-cart-popup .cart-is-empty h1 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
 .shopping-cart-popup .cart-is-empty img {
   padding: 4vh;
   max-width: 100%;
@@ -841,7 +848,7 @@ button:active {
 }
 
 .shopping-cart-popup .cart-not-empty {
-  height: calc(100vh - 79px);
+  height: calc(100vh - 80px);
   padding: 5%;
   overflow: auto;
   display: -webkit-box;
@@ -873,6 +880,11 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 18px;
+}
+
+.shopping-cart-popup .cart-not-empty .shopping-cart-contents section > div:not(.quantity-check) h3 {
+  font-size: 18px;
 }
 
 .shopping-cart-popup .cart-not-empty .shopping-cart-contents section:last-of-type {
@@ -912,6 +924,28 @@ button:active {
   margin-top: 20px;
 }
 
+.shopping-cart-popup .cart-not-empty a button {
+  color: #FFF;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  background-image: linear-gradient(60deg, #fd42b5, #d40059);
+}
+
+.shopping-cart-popup .cart-not-empty a button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.shopping-cart-popup .cart-not-empty a button:active {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
 .price-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -948,11 +982,15 @@ button:active {
 }
 
 .promo input {
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
 }
 
 .promo button {
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   background-image: linear-gradient(60deg, #49C000, #3a9202);
